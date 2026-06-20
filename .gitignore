@@ -1,0 +1,25 @@
+# Run artifacts: keep the dirs, ignore their contents (runs are reproducible).
+runs/*
+!runs/.gitkeep
+!runs/baseline/
+reports/*
+!reports/.gitkeep
+
+# Corpus downloads (the redistributable subset is committed under images/;
+# large originals fetched on demand are not).
+corpus/_download/
+
+# Grade cache (content-addressed; rebuildable, must not be committed)
+.cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Plot output
+**/plots/
+
+# OS noise
+.DS_Store

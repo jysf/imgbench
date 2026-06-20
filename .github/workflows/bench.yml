@@ -1,0 +1,72 @@
+name: bench
+
+# Size/quality regression gate. Wall-clock is deliberately NOT asserted here:
+# GitHub-hosted runners are too noisy for stable timing. Gate timing only on a
+# pinned self-hosted runner (see the commented job at the bottom).
+
+on:
+  pull_request:
+    paths:
+      - "bench/**"
+      - "corpus/**"
+      - "tools/**"
+      - ".github/workflows/bench.yml"
+  workflow_dispatch: {}
+
+jobs:
+  size-quality-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build pinned tools image
+        run: docker build -f tools/Dockerfile -t imgbench-tools .
+
+      - name: Sanity — tools + graders resolve
+        run: docker run --rm imgbench-tools check
+
+      - name: Skip if corpus not yet populated
+        id: corpus
+        run: |
+          count=$(find corpus/images -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' \) | wc -l)
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          if [ "$count" -eq 0 ]; then
+            echo "::warning::corpus/images is empty (TODO placeholders) — gate skipped"
+          fi
+
+      - name: Run benchmark (candidate)
+        if: steps.corpus.outputs.count != '0'
+        run: |
+          docker run --rm -v "$PWD:/work" imgbench-tools \
+            run --inputs /work/corpus/images --runs-root /work/runs \
+                --reports-root /work/reports
+
+      - name: Gate against committed baseline (size/quality only)
+        if: steps.corpus.outputs.count != '0'
+        run: |
+          # Compare the freshly-written latest run to the committed baseline.
+          # Exits nonzero on a size/quality regression beyond tolerance.
+          docker run --rm -v "$PWD:/work" imgbench-tools \
+            compare /work/runs/baseline /work/runs/latest \
+                    --reports-root /work/reports
+
+      - name: Upload run dir + reports
+        if: always() && steps.corpus.outputs.count != '0'
+        uses: actions/upload-artifact@v4
+        with:
+          name: bench-run-${{ github.run_id }}
+          path: |
+            runs/
+            reports/
+          retention-days: 30
+
+  # --- Timing gate (self-hosted / pinned hardware ONLY) ---------------------
+  # Wall-clock on shared CI is meaningless. Enable this only on a dedicated,
+  # thermally-stable, governor-pinned self-hosted runner, and pass --gate-speed.
+  #
+  # timing-gate:
+  #   runs-on: [self-hosted, bench-rig]
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - run: python3 -m bench run --inputs corpus/images
+  #     - run: python3 -m bench compare runs/baseline runs/latest --gate-speed

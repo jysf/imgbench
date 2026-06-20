@@ -1,0 +1,7 @@
+# OPTIONAL extras — NOT needed by the core benchmark.
+#
+# The core (bench/) is Python 3.14 standard library only, so `bench check`,
+# `run`, `compare`, `corpus`, and `footprint` all work in CI with no venv.
+# Install these only for the opt-in plotting in scripts/plot.py.
+
+matplotlib>=3.7
