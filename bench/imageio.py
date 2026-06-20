@@ -69,6 +69,34 @@ def solid_rgb(width: int, height: int, rgb=(127, 127, 127)) -> bytes:
 _CHANNELS = {0: 1, 2: 3, 4: 2, 6: 4}
 
 
+def strip_ancillary_png(path: Path) -> bool:
+    """Remove ancillary chunks (color primaries, ICC, gamma, …) from a PNG,
+    keeping only the critical ones. Pixel data is untouched. Fast byte-level walk
+    — no decode. Needed because some decoders (e.g. avifdec on a primaries-tagged
+    AVIF) emit a ``cICP``/``iCCP`` chunk that libjxl's grader rejects
+    ("Unsupported primaries"). Returns True if rewritten."""
+    data = Path(path).read_bytes()
+    if data[:8] != PNG_SIG:
+        return False
+    keep = {b"IHDR", b"PLTE", b"IDAT", b"IEND", b"tRNS"}
+    out = bytearray(PNG_SIG)
+    i, changed = 8, False
+    while i + 8 <= len(data):
+        length = struct.unpack(">I", data[i:i + 4])[0]
+        tag = data[i + 4:i + 8]
+        end = i + 12 + length
+        if tag in keep:
+            out += data[i:end]
+        else:
+            changed = True
+        i = end
+        if tag == b"IEND":
+            break
+    if changed:
+        Path(path).write_bytes(bytes(out))
+    return changed
+
+
 def read_png(path: Path) -> tuple[int, int, int, bytes]:
     """Decode an 8-bit, non-interlaced PNG. Returns (width, height, channels,
     pixels) where pixels is raw row-major samples (no per-row filter byte).

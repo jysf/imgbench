@@ -50,6 +50,23 @@ class TestPngRoundTrip(unittest.TestCase):
         self.assertEqual((w, h, ch), (8, 8, 4))
         self.assertEqual(out, px)
 
+    def test_strip_ancillary_png(self):
+        import struct, zlib
+        p = self.tmp / "c.png"
+        imageio.write_png(p, 4, 4, imageio.solid_rgb(4, 4), alpha=False)
+        # Inject a bogus ancillary cICP chunk right after IHDR (ends at byte 33).
+        body = b"\x09\x10\x00\x00"
+        chunk = (struct.pack(">I", len(body)) + b"cICP" + body
+                 + struct.pack(">I", zlib.crc32(b"cICP" + body) & 0xFFFFFFFF))
+        data = bytearray(p.read_bytes())
+        data[33:33] = chunk
+        p.write_bytes(bytes(data))
+        self.assertIn(b"cICP", p.read_bytes())
+        self.assertTrue(imageio.strip_ancillary_png(p))
+        self.assertNotIn(b"cICP", p.read_bytes())          # chunk removed
+        w, h, ch, _ = imageio.read_png(p)                  # pixels still intact
+        self.assertEqual((w, h, ch), (4, 4, 3))
+
     def test_flatten_opaque_alpha_preserves_rgb(self):
         # fully-opaque RGBA -> dropping alpha must equal the RGB channels
         w = h = 5

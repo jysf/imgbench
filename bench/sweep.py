@@ -266,6 +266,11 @@ def _encode_point(adapter, cfg, img, fmt, q, scratch_dir, grader,
     return _grade_and_validate(point, produced, img, grader)
 
 
+# Format -> the file extensions a tool might actually write (sharp writes .jpg
+# for "jpeg"), so the dir-writer normaliser finds the produced file.
+_FMT_EXTS = {"jpeg": ("jpeg", "jpg"), "jpg": ("jpg", "jpeg")}
+
+
 def _normalise_output(adapter, outp: Path, fmt: str, scratch_dir: Path, img: Path):
     """Dir-writing tools name their own output; move the single produced image
     to the canonical ``outp`` so the rest of the pipeline is uniform."""
@@ -273,7 +278,8 @@ def _normalise_output(adapter, outp: Path, fmt: str, scratch_dir: Path, img: Pat
         return outp if outp.exists() else None
     if outp.exists():
         return outp
-    candidates = [f for f in scratch_dir.glob(f"*.{fmt}")
+    exts = _FMT_EXTS.get(fmt, (fmt,))
+    candidates = [f for e in exts for f in scratch_dir.glob(f"*.{e}")
                   if f != img and f != outp]
     if len(candidates) == 1:
         candidates[0].replace(outp)
