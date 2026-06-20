@@ -1,0 +1,23 @@
+# Keep the build context small and free of staging/personal/large files.
+.git
+__pycache__/
+*.pyc
+.cache/
+.venv/
+venv/
+
+# Run artifacts + reports (regenerated; runs mount in at run time)
+runs/*
+!runs/baseline/
+reports/*
+
+# Corpus staging / personal / download cache (never bake into the image)
+corpus/images/initial_import/
+corpus/images/screenshots/
+corpus/images/new_import/
+corpus/images/_dl/
+corpus/local/
+corpus/_download/
+
+**/plots/
+.DS_Store

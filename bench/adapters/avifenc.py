@@ -17,6 +17,9 @@ class Avifenc(Adapter):
     name, binary, formats = "avifenc", "avifenc", ("avif",)
     version_args = ("--version",)
 
+    def quality_range(self, fmt: str):
+        return list(range(40, 101, 5))
+
     def cmd(self, inp: Path, outp: Path, fmt: str, q, cfg: EncodeConfig):
         cmd = [self.binary, "-q", str(q),
                "--speed", str(max(0, 10 - cfg.avif_effort)),

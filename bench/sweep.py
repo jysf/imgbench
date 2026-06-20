@@ -17,6 +17,7 @@ from pathlib import Path
 
 from concurrent.futures import ThreadPoolExecutor
 
+from .decode import decode_for_grading
 from .measure import RunStats, measure, run_once
 from .validate import Validity, check_output
 
@@ -237,9 +238,16 @@ def _encode_only(adapter, cfg, img, fmt, q, scratch_dir, *, best_of, warmup,
 
 def _grade_and_validate(point: Point, produced: Path, img: Path, grader) -> Point:
     """Fill in a point's score + validity. Pure (no timing side effects), so it
-    is safe to run in parallel AFTER all timed encodes for an image complete."""
-    point.score = grader.score(img, produced) if grader else None
+    is safe to run in parallel AFTER all timed encodes for an image complete.
+
+    Validity is checked on the ENCODED output (to catch dropped alpha / resize);
+    grading is done on the DECODED pixels (the C grader can't read WebP/AVIF)."""
     point.valid = check_output(img, produced)
+    if grader:
+        gradable = decode_for_grading(produced, produced.parent)
+        point.score = grader.score(img, gradable) if gradable else None
+    else:
+        point.score = None
     if point.valid and not point.valid.ok:
         qtag = "lossless" if point.quality is None else f"q{point.quality}"
         print(f"    ! {qtag}: invalid output ({'; '.join(point.valid.notes)})")

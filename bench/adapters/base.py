@@ -74,7 +74,9 @@ class Adapter:
     def quality_range(self, fmt: str) -> list:
         if self.lossless:
             return [None]
-        return list(range(40, 96, 5))  # 40..95 step 5; refined near target later
+        # 40..100 step 5; the high end is needed to bracket ss2≈90 on hard
+        # (high-frequency) images. Bisection refines near each target later.
+        return list(range(40, 101, 5))
 
     def supports_quality(self, fmt: str) -> bool:
         """True if this adapter can encode at an arbitrary quality (so the
