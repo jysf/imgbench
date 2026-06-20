@@ -1,0 +1,12 @@
+{
+  "schema": 2,
+  "bench_version": "0.1.0",
+  "bench_git_sha": "baseline-placeholder",
+  "machine": {},
+  "config": {"note": "placeholder baseline — replace with a real run (see README.md)"},
+  "corpus": {"per_image": {}, "aggregate_sha256": null, "count": 0},
+  "tools": {},
+  "graders": {},
+  "primary_grader": null,
+  "grader_agreement": null
+}
