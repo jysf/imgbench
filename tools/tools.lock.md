@@ -15,6 +15,7 @@ refuses to diff (unless `--allow-version-drift`).
 | sharp-cli | contender (ecosystem baseline) | 4.2.0 (TODO) | `npm i -g sharp-cli` | Node + libvips; report cold-start separately |
 | cwebp (libwebp) | single-format WebP | TODO | `apt install webp` | |
 | avifenc (libavif) | single-format AVIF | TODO | `apt install libavif-bin` | match `--speed` to shared effort |
+| cjpeg (MozJPEG) | single-format JPEG | TODO | build mozjpeg (or a pkg that ships MozJPEG's cjpeg) | MUST be MozJPEG's cjpeg, NOT libjpeg-turbo's — they differ in output size |
 | oxipng | lossless PNG | 9.1.2 (TODO) | `cargo install oxipng` | |
 | pngquant | lossy palette PNG | TODO | `apt install pngquant` | |
 | **crustyimg** (subject) | subject under test | TODO `0.1.x` + commit | build locally | MUST build `--features webp-lossy,avif` |

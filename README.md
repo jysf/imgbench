@@ -9,7 +9,7 @@ quality axis and read off bytes and time.
 
 The harness compares **crustyimg** (the subject) against **rimage** (the fairest
 1:1 Rust CLI), **sharp** (the ecosystem baseline), and the single-format
-encoders (`cwebp`, `avifenc`, `oxipng`, `pngquant`). Full reasoning lives in
+encoders (`cwebp`, `avifenc`, `cjpeg`/MozJPEG, `oxipng`, `pngquant`). Full reasoning lives in
 [`benchmark-methodology.md`](benchmark-methodology.md).
 
 ---
@@ -219,7 +219,7 @@ bench footprint [--cold-install]     per-tool footprint snapshot
 bench cache [--clear]                inspect or clear the grade cache
 ```
 
-Useful `run` flags: `--formats webp avif png`, `--targets 80 90`, `--best-of 5`,
+Useful `run` flags: `--formats webp avif jpeg png`, `--targets 80 90`, `--best-of 5`,
 `--warmup 1`, `--threads 1`, `--avif-effort 6`, `--pin-cpu N` (taskset, Linux),
 `--no-strip`, `--grader ssimulacra2`, `--tools rimage sharp`, `--dry-run`,
 `--fast`, `--jobs N`, `--grade-jobs N`, `--no-grade-cache`, `--grade-cache PATH`.

@@ -382,7 +382,7 @@ def build_parser() -> argparse.ArgumentParser:
     r.add_argument("--inputs", type=Path, default=here / "corpus" / "images")
     r.add_argument("--runs-root", type=Path, default=here / "runs")
     r.add_argument("--reports-root", type=Path, default=here / "reports")
-    r.add_argument("--formats", nargs="+", default=["webp", "avif", "png"])
+    r.add_argument("--formats", nargs="+", default=["webp", "avif", "jpeg", "png"])
     r.add_argument("--targets", nargs="+", type=float, default=[80.0, 90.0])
     r.add_argument("--best-of", type=int, default=5)
     r.add_argument("--warmup", type=int, default=1)

@@ -38,7 +38,7 @@ bench/
   footprint.py       per-tool binary size, deps, runtime, cold-install
   adapters/          one module per encoder (the .cmd() pattern)
     base.py          Adapter ABC + EncodeConfig (the fairness knobs)
-    rimage/sharp/cwebp/avifenc/oxipng/crustyimg.py
+    rimage/sharp/cwebp/avifenc/mozjpeg/oxipng/crustyimg.py
   grade/             pluggable perceptual metrics
     base.py          Grader ABC
     ssimulacra2.py   C reference (primary) + Rust (cross-check only)

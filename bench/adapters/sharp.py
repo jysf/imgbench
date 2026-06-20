@@ -17,7 +17,7 @@ from .base import Adapter, EncodeConfig
 
 
 class SharpCli(Adapter):
-    name, binary, formats = "sharp", "sharp", ("webp", "avif")
+    name, binary, formats = "sharp", "sharp", ("webp", "avif", "jpeg")
     writes_to_dir = True
 
     def cmd(self, inp: Path, outp: Path, fmt: str, q, cfg: EncodeConfig):

@@ -8,7 +8,7 @@ A small, reproducible benchmark that compares image-optimization tools
 **fairly** — by holding *perceptual quality* constant and reading off bytes and
 time. The subject under test is **crustyimg**; the yardsticks are **rimage** (the
 closest 1:1 Rust CLI), **sharp** (the ecosystem baseline), and the single-format
-encoders (`cwebp`, `avifenc`, `oxipng`, `pngquant`).
+encoders (`cwebp`, `avifenc`, `cjpeg`/MozJPEG, `oxipng`, `pngquant`).
 
 ## The one rule (non-negotiable)
 
@@ -22,9 +22,9 @@ SSIMULACRA2 build, and **interpolates the bytes at the target score** (80 and
 
 ## The shape
 
-- **Lanes.** Lossy photo lane (WebP/AVIF, full sweep + interpolation); lossless
-  PNG lane (oxipng vs sharp, one operating point); lossy palette PNG lane
-  (pngquant, a real sweep).
+- **Lanes.** Lossy photo lane (WebP/AVIF/JPEG, full sweep + interpolation);
+  lossless PNG lane (oxipng vs sharp, one operating point); lossy palette PNG
+  lane (pngquant, a real sweep).
 - **Grader independence.** crustyimg optimizes against the Rust `ssimulacra2`
   crate, so the default grader is the *Cloudinary C reference* — grading on the
   same implementation would be teaching-to-the-test. A built-in agreement check

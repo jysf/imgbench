@@ -13,13 +13,17 @@ from .base import Adapter, EncodeConfig
 
 
 class Rimage(Adapter):
-    name, binary, formats = "rimage", "rimage", ("webp", "avif")
+    name, binary, formats = "rimage", "rimage", ("webp", "avif", "jpeg")
     # rimage writes into a directory with -d; we point it at the point's
     # scratch dir and the runner normalises the produced file to ``outp``.
     writes_to_dir = True
 
+    # rimage's JPEG codec is MozJPEG; the subcommand name has been "jpg"/
+    # "mozjpeg" across versions — verify with --dry-run and adjust here.
+    CODEC = {"webp": "webp", "avif": "avif", "jpeg": "mozjpeg"}
+
     def cmd(self, inp: Path, outp: Path, fmt: str, q, cfg: EncodeConfig):
-        cmd = [self.binary, fmt, "--quality", str(q)]
+        cmd = [self.binary, self.CODEC.get(fmt, fmt), "--quality", str(q)]
         if fmt == "avif":
             # rimage exposes AVIF speed (0..10, lower=slower/better). Map the
             # shared "effort" so all tools sit at the same operating point.

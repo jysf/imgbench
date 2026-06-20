@@ -42,6 +42,13 @@ RUN cargo install rimage --version ${RIMAGE_VERSION} \
 ARG SHARP_CLI_VERSION=4.2.0  # TODO
 RUN npm install -g sharp-cli@${SHARP_CLI_VERSION}
 
+# --- MozJPEG (the JPEG lane) -----------------------------------------------
+# The JPEG competitor must be MozJPEG's `cjpeg`, NOT libjpeg-turbo's (they
+# differ in output size). Build it from source at a pinned tag, or install a
+# package that provides MozJPEG's cjpeg, and ensure it wins on PATH.
+ARG MOZJPEG_VERSION=v4.1.5    # TODO: pin
+RUN echo "TODO: build github.com/mozilla/mozjpeg@${MOZJPEG_VERSION} and install cjpeg to /usr/local/bin"
+
 # --- SSIMULACRA2: the INDEPENDENT C reference (primary grader) -------------
 # Build the Cloudinary C reference at a pinned commit; this is the grader the
 # benchmark trusts (NOT ssimulacra2_rs, which crustyimg optimises against).

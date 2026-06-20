@@ -7,12 +7,13 @@ from .base import Adapter, EncodeConfig
 from .avifenc import Avifenc
 from .crustyimg import CrustyImg
 from .cwebp import Cwebp
+from .mozjpeg import Cjpeg
 from .oxipng import Oxipng, Pngquant
 from .rimage import Rimage
 from .sharp import SharpCli, SharpPng
 
 ADAPTERS: list[Adapter] = [
-    Rimage(), SharpCli(), Cwebp(), Avifenc(),
+    Rimage(), SharpCli(), Cwebp(), Avifenc(), Cjpeg(),
     Oxipng(), SharpPng(), Pngquant(), CrustyImg(),
 ]
 
@@ -30,6 +31,6 @@ def by_name(name: str) -> Adapter | None:
 
 __all__ = [
     "Adapter", "EncodeConfig", "ADAPTERS", "all_adapters", "by_name",
-    "Rimage", "SharpCli", "SharpPng", "Cwebp", "Avifenc", "Oxipng",
+    "Rimage", "SharpCli", "SharpPng", "Cwebp", "Avifenc", "Cjpeg", "Oxipng",
     "Pngquant", "CrustyImg",
 ]
