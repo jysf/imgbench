@@ -44,6 +44,21 @@ the screenshots are self-captured. No image carries GPS or personal data.
 - The **personal-photo corpus** lives locally in `corpus/local/` (gitignored,
   never published); run it with `just run-local`.
 
+## Checksums (full — the source of truth)
+
+`bench corpus` verifies each file against these. Standard `sha256sum` format.
+
+```
+cdb2f486756f184b02412f0980cd2c8970d92297af66544b74d042de1e4bfff6  photo_foliage.png
+ac18cedbb555e683d80c8960f2224d4a84ca4b78eec4321d63f3d756619b9019  photo_sky.png
+c751b0d6e68a0936141fa3adae6f6f5e5f9a37fd95f24b9ecc67d9caef180e40  photo_portrait.png
+22bd0ae644e4a45cbf71db75d4af66ab7c150d56968c6f9a06b658b090bd8098  photo_lowlight.png
+3b8dcf2b87a6418bf2d340e0c9ce7862422d61ae4f3ee2555371fed5ab9cd016  photo_exif.jpg
+dfa0c16e1726d135349dec6064f0d4d5adbd47f67163ff954fb517b80d4bdae6  alpha_logo.png
+8e282db7b40dbd6b446a60a9d82c5d77e6c24711b425b517a9d53d4057bdebc7  screenshot_ui.png
+7719aa15cc5c7b90eee91576e87d2318545fbc624ffe9d937e1fa61f01b254e2  screenshot_text.png
+```
+
 ## Deliberately excluded corpora
 
 - **Kodak** — murky/contested redistribution license.
