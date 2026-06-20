@@ -23,8 +23,8 @@ the screenshots are self-captured. No image carries GPS or personal data.
 | `photo_lowlight.png` | Quebec city at dusk, lit tower | low-light noise + dark gradients | [Wikimedia](https://commons.wikimedia.org/wiki/File:%C3%89difice_Price_at_night,_Quebec_city,_Canada.jpg) · Wilfredor · **CC0** | `22bd0ae644e4…090bd8098` |
 | `photo_exif.jpg` | autumn leaves, w/ synthetic EXIF | metadata-strip lane (tools must drop EXIF) | [Wikimedia](https://commons.wikimedia.org/wiki/File:Colorful_leaves_in_autumn.jpg) · Tbk1101 · **CC0** | `3b8dcf2b87a6…ab9cd016` |
 | `alpha_logo.png` | generated RGBA, real transparency | transparency-correctness check | generated · **CC0** | `dfa0c16e1726…0d4bdae6` |
-| `screenshot_ui.png` | code-editor UI, flat color + sharp edges | lossless/near-lossless path | self-captured · **CC0** | _TODO — pending capture_ |
-| `screenshot_text.png` | terminal / dense text | text edges, palette path | self-captured · **CC0** | _TODO — pending capture_ |
+| `screenshot_ui.png` | macOS Calculator (scientific) UI — flat color, buttons, sharp edges | lossless/near-lossless path | self-captured · **CC0** | `8e282db7b40d…57bdebc7` |
+| `screenshot_text.png` | editor / terminal, dense text | text edges, palette path | self-captured · **CC0** | _TODO — pending capture_ |
 
 (Truncated hashes shown for readability; `bench corpus` prints/checks the full
 64-hex digests, which are the source of truth.)
