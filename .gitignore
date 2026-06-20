@@ -9,6 +9,17 @@ reports/*
 # large originals fetched on demand are not).
 corpus/_download/
 
+# Raw photo staging — never commit originals (huge, may contain GPS/EXIF, and
+# may not be license/privacy-clean). CATCH-ALL: ignore ANY subdirectory under
+# corpus/images/ (initial_import/, screenshots/, new_import/, _dl/, …). Only the
+# curated, scrubbed slot files directly in corpus/images/*.{png,jpg} are
+# committed — this stops `git add -A` from ever sweeping in staging photos.
+corpus/images/*/
+
+# Local personal corpus — run the benchmark on your own photos locally; never
+# committed. Use: just run-local  (or bench run --inputs corpus/local)
+corpus/local/
+
 # Grade cache (content-addressed; rebuildable, must not be committed)
 .cache/
 

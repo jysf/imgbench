@@ -22,6 +22,10 @@ run *ARGS:
 run-fast *ARGS:
     {{python}} -m bench run --inputs {{corpus}} --fast {{ARGS}}
 
+# Run on your LOCAL personal corpus (corpus/local, gitignored — never published)
+run-local *ARGS:
+    {{python}} -m bench run --inputs corpus/local {{ARGS}}
+
 # Inspect or clear the persistent grade cache
 cache *ARGS:
     {{python}} -m bench cache {{ARGS}}

@@ -65,6 +65,102 @@ def solid_rgb(width: int, height: int, rgb=(127, 127, 127)) -> bytes:
     return bytes(rgb) * (width * height)
 
 
+# Color-type -> channel count for 8-bit PNG (the cases we read/write).
+_CHANNELS = {0: 1, 2: 3, 4: 2, 6: 4}
+
+
+def read_png(path: Path) -> tuple[int, int, int, bytes]:
+    """Decode an 8-bit, non-interlaced PNG. Returns (width, height, channels,
+    pixels) where pixels is raw row-major samples (no per-row filter byte).
+    Supports color types 0/2/4/6 at bit depth 8 — enough for our corpus prep
+    and tests; raises ValueError otherwise (palette/16-bit/interlaced)."""
+    data = Path(path).read_bytes()
+    if data[:8] != PNG_SIG:
+        raise ValueError("not a PNG")
+    w, h, depth, color_type, _comp, _filt, interlace = struct.unpack(
+        ">IIBBBBB", data[16:29])
+    if depth != 8 or interlace != 0 or color_type not in _CHANNELS:
+        raise ValueError(f"unsupported PNG (depth={depth}, type={color_type}, "
+                         f"interlace={interlace}); only 8-bit non-interlaced "
+                         f"gray/RGB/+alpha")
+    ch = _CHANNELS[color_type]
+
+    # Concatenate IDAT chunk bodies, then inflate.
+    idat = bytearray()
+    i = 8
+    while i + 8 <= len(data):
+        length = struct.unpack(">I", data[i:i + 4])[0]
+        tag = data[i + 4:i + 8]
+        body = data[i + 8:i + 8 + length]
+        if tag == b"IDAT":
+            idat += body
+        elif tag == b"IEND":
+            break
+        i += 12 + length
+    raw = zlib.decompress(bytes(idat))
+
+    stride = w * ch
+    out = bytearray(stride * h)
+    prev = bytearray(stride)
+    pos = 0
+    for y in range(h):
+        ftype = raw[pos]
+        pos += 1
+        line = bytearray(raw[pos:pos + stride])
+        pos += stride
+        _unfilter(line, prev, ftype, ch)
+        out[y * stride:(y + 1) * stride] = line
+        prev = line
+    return w, h, ch, bytes(out)
+
+
+def _unfilter(line: bytearray, prev: bytearray, ftype: int, bpp: int) -> None:
+    """Reverse a PNG scanline filter in place (0=None,1=Sub,2=Up,3=Avg,4=Paeth)."""
+    if ftype == 0:
+        return
+    for x in range(len(line)):
+        a = line[x - bpp] if x >= bpp else 0
+        b = prev[x]
+        c = prev[x - bpp] if x >= bpp else 0
+        if ftype == 1:
+            v = a
+        elif ftype == 2:
+            v = b
+        elif ftype == 3:
+            v = (a + b) >> 1
+        elif ftype == 4:
+            p = a + b - c
+            pa, pb, pc = abs(p - a), abs(p - b), abs(p - c)
+            v = a if (pa <= pb and pa <= pc) else (b if pb <= pc else c)
+        else:
+            raise ValueError(f"bad PNG filter {ftype}")
+        line[x] = (line[x] + v) & 0xFF
+
+
+def flatten_to_rgb(width: int, height: int, channels: int, pixels: bytes,
+                   bg=(255, 255, 255)) -> bytes:
+    """Composite any alpha over ``bg`` and return RGB (3 B/px). Gray is expanded
+    to RGB. Opaque pixels are unchanged."""
+    out = bytearray(width * height * 3)
+    o = 0
+    if channels == 3:
+        return pixels
+    for px in range(width * height):
+        base = px * channels
+        if channels == 4:
+            r, g, b, a = pixels[base], pixels[base+1], pixels[base+2], pixels[base+3]
+        elif channels == 2:  # gray + alpha
+            r = g = b = pixels[base]; a = pixels[base+1]
+        else:  # gray
+            r = g = b = pixels[base]; a = 255
+        if a != 255:
+            r = (r * a + bg[0] * (255 - a)) // 255
+            g = (g * a + bg[1] * (255 - a)) // 255
+            b = (b * a + bg[2] * (255 - a)) // 255
+        out[o] = r; out[o+1] = g; out[o+2] = b; o += 3
+    return bytes(out)
+
+
 def gradient_rgba(width: int, height: int) -> bytes:
     """A smooth gradient with a varying alpha ramp — useful for alpha tests."""
     buf = bytearray()

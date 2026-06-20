@@ -7,8 +7,8 @@ refuses to diff (unless `--allow-version-drift`).
 
 | component | role | pinned version / commit | source | notes |
 |---|---|---|---|---|
-| **ssimulacra2** (Cloudinary C ref) | **primary grader** | TODO commit SHA | github.com/cloudinary/ssimulacra2 | the independent grader; NOT the Rust crate crustyimg optimises against |
-| ssimulacra2_rs | grader cross-check only | TODO | `cargo install ssimulacra2_rs` | used solely for the agreement sanity-check |
+| **ssimulacra2** (C ref, via libjxl) | **primary grader** | libjxl `v0.11.1` (built in Dockerfile) | github.com/libjxl/libjxl `tools/ssimulacra2` | the canonical C implementation (Jon Sneyers); NOT the Rust crate crustyimg optimises against |
+| ssimulacra2_rs | grader cross-check only | `0.5.0` | `cargo install ssimulacra2_rs` | used solely for the agreement sanity-check |
 | butteraugli (libjxl) | visually-lossless cross-check | TODO | libjxl | optional |
 | dssim | cross-check | TODO | `cargo install dssim` | optional |
 | rimage | contender (1:1) | 0.11.0 (TODO confirm) | `cargo install rimage` | shares fast_image_resize + kamadak-exif with crustyimg |
