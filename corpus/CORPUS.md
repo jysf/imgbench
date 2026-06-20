@@ -24,7 +24,7 @@ the screenshots are self-captured. No image carries GPS or personal data.
 | `photo_exif.jpg` | autumn leaves, w/ synthetic EXIF | metadata-strip lane (tools must drop EXIF) | [Wikimedia](https://commons.wikimedia.org/wiki/File:Colorful_leaves_in_autumn.jpg) · Tbk1101 · **CC0** | `3b8dcf2b87a6…ab9cd016` |
 | `alpha_logo.png` | generated RGBA, real transparency | transparency-correctness check | generated · **CC0** | `dfa0c16e1726…0d4bdae6` |
 | `screenshot_ui.png` | macOS Calculator (scientific) UI — flat color, buttons, sharp edges | lossless/near-lossless path | self-captured · third-party UI, see note | `8e282db7b40d…57bdebc7` |
-| `screenshot_text.png` | Craigslist SF landing page — dense text/links | text edges, palette path | self-captured · third-party UI, see note | `7719aa15cc5c…f01b254e2` |
+| `screenshot_text.png` | terminal — dense monospace glyphs | text edges, palette path | self-captured terminal · **CC0** | `7cf5a6f30a02…ee8bfff2` |
 
 (Truncated hashes shown for readability; `bench corpus` prints/checks the full
 64-hex digests, which are the source of truth.)
@@ -34,13 +34,11 @@ the screenshots are self-captured. No image carries GPS or personal data.
 - **`photo_exif.jpg`** carries *synthetic* EXIF (`Make=imgbench`, `Model=TestCam
   EXIF`, a date) and **no GPS** — just enough metadata for the strip lane to have
   something to strip, with nothing personal.
-- **Screenshots** (`screenshot_ui` = macOS Calculator; `screenshot_text` =
-  Craigslist landing page) are self-captured and contain **third-party UI**
-  (Apple's app chrome; Craigslist's page). They're included as *functional
-  benchmark inputs* under a fair-use rationale — factual, transformative, no
-  market harm — and are **not relicensed**. They carry no personal data or
-  account identifiers. Swap for captures of software you own if you prefer zero
-  third-party content.
+- **Screenshots.** `screenshot_text` is a self-captured **terminal** (your own
+  content — CC0). `screenshot_ui` is a macOS **Calculator** capture, which
+  contains Apple's app UI — included as a *functional benchmark input* under a
+  fair-use rationale (factual, transformative, no market harm), **not
+  relicensed**. Neither carries personal data or account identifiers.
 - The **personal-photo corpus** lives locally in `corpus/local/` (gitignored,
   never published); run it with `just run-local`.
 
@@ -56,7 +54,7 @@ c751b0d6e68a0936141fa3adae6f6f5e5f9a37fd95f24b9ecc67d9caef180e40  photo_portrait
 3b8dcf2b87a6418bf2d340e0c9ce7862422d61ae4f3ee2555371fed5ab9cd016  photo_exif.jpg
 dfa0c16e1726d135349dec6064f0d4d5adbd47f67163ff954fb517b80d4bdae6  alpha_logo.png
 8e282db7b40dbd6b446a60a9d82c5d77e6c24711b425b517a9d53d4057bdebc7  screenshot_ui.png
-7719aa15cc5c7b90eee91576e87d2318545fbc624ffe9d937e1fa61f01b254e2  screenshot_text.png
+7cf5a6f30a020c9c179869655e5913663e81bb1acf906b7b389fdf5cee8bfff2  screenshot_text.png
 ```
 
 ## Deliberately excluded corpora
