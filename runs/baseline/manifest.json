@@ -1,12 +1,254 @@
 {
   "schema": 2,
   "bench_version": "0.1.0",
-  "bench_git_sha": "baseline-placeholder",
-  "machine": {},
-  "config": {"note": "placeholder baseline — replace with a real run (see README.md)"},
-  "corpus": {"per_image": {}, "aggregate_sha256": null, "count": 0},
-  "tools": {},
-  "graders": {},
-  "primary_grader": null,
-  "grader_agreement": null
+  "bench_git_sha": "nogit",
+  "argv": [
+    "/work/bench/__main__.py",
+    "run",
+    "--inputs",
+    "/work/corpus/images",
+    "--runs-root",
+    "/work/runs",
+    "--reports-root",
+    "/work/reports",
+    "--formats",
+    "webp",
+    "avif",
+    "jpeg",
+    "png",
+    "--fast",
+    "--jobs",
+    "10",
+    "--targets",
+    "80",
+    "90"
+  ],
+  "machine": {
+    "cpu_model": null,
+    "cores": {
+      "logical": 14,
+      "physical": null
+    },
+    "ram_bytes": 8320954368,
+    "os": "Linux 6.12.76-linuxkit",
+    "kernel": "#1 SMP Fri May 29 10:00:01 UTC 2026",
+    "machine": "aarch64",
+    "python": "3.14.6",
+    "scaling": {
+      "governor": null,
+      "turbo": null
+    }
+  },
+  "config": {
+    "formats": [
+      "webp",
+      "avif",
+      "jpeg",
+      "png"
+    ],
+    "targets": [
+      80.0,
+      90.0
+    ],
+    "best_of": 5,
+    "warmup": 1,
+    "threads": 1,
+    "avif_effort": 6,
+    "strip_metadata": true,
+    "pin_cpu": null,
+    "refine_iters": 3,
+    "mode": "fast",
+    "timing_trustworthy": false,
+    "parallel_jobs": 10,
+    "grade_jobs": 1,
+    "grade_cache": {
+      "hits": 744,
+      "misses": 126,
+      "entries": 851,
+      "hit_rate": 0.855,
+      "path": "/work/.cache/grade-cache.json"
+    }
+  },
+  "corpus": {
+    "per_image": {
+      "alpha_logo.png": {
+        "sha256": "dfa0c16e1726d135349dec6064f0d4d5adbd47f67163ff954fb517b80d4bdae6",
+        "bytes": 32386
+      },
+      "photo_exif.jpg": {
+        "sha256": "3b8dcf2b87a6418bf2d340e0c9ce7862422d61ae4f3ee2555371fed5ab9cd016",
+        "bytes": 1105958
+      },
+      "photo_foliage.png": {
+        "sha256": "cdb2f486756f184b02412f0980cd2c8970d92297af66544b74d042de1e4bfff6",
+        "bytes": 2575178
+      },
+      "photo_lowlight.png": {
+        "sha256": "22bd0ae644e4a45cbf71db75d4af66ab7c150d56968c6f9a06b658b090bd8098",
+        "bytes": 3915902
+      },
+      "photo_portrait.png": {
+        "sha256": "c751b0d6e68a0936141fa3adae6f6f5e5f9a37fd95f24b9ecc67d9caef180e40",
+        "bytes": 4537216
+      },
+      "photo_sky.png": {
+        "sha256": "ac18cedbb555e683d80c8960f2224d4a84ca4b78eec4321d63f3d756619b9019",
+        "bytes": 1953836
+      },
+      "screenshot_text.png": {
+        "sha256": "7cf5a6f30a020c9c179869655e5913663e81bb1acf906b7b389fdf5cee8bfff2",
+        "bytes": 269139
+      },
+      "screenshot_ui.png": {
+        "sha256": "8e282db7b40dbd6b446a60a9d82c5d77e6c24711b425b517a9d53d4057bdebc7",
+        "bytes": 111334
+      }
+    },
+    "aggregate_sha256": "26296f2695e163aa4f2c127b2f4761ad8b4801e50ffc47e16bebb8838a80da9d",
+    "count": 8
+  },
+  "tools": {
+    "rimage": {
+      "available": false,
+      "binary": null,
+      "version": null
+    },
+    "sharp": {
+      "available": true,
+      "binary": "/usr/local/bin/sharp",
+      "version": "4.2.0"
+    },
+    "cwebp": {
+      "available": true,
+      "binary": "/usr/bin/cwebp",
+      "version": "1.5.0"
+    },
+    "avifenc": {
+      "available": true,
+      "binary": "/usr/bin/avifenc",
+      "version": "Version: 1.2.1 (dav1d [dec]:1.5.1, libgav1 [dec]:0.19.0, aom [enc/dec]:v3.12.1, rav1e [enc]:0.7.1 (UNKNOWN), svt [enc]:v2.3.0)"
+    },
+    "cjpeg": {
+      "available": true,
+      "binary": "/opt/mozjpeg/bin/cjpeg",
+      "version": "mozjpeg version 4.1.1 (build 20260620)"
+    },
+    "oxipng": {
+      "available": true,
+      "binary": "/opt/cargo/bin/oxipng",
+      "version": "oxipng 9.1.2"
+    },
+    "sharp-png": {
+      "available": true,
+      "binary": "/usr/local/bin/sharp",
+      "version": "4.2.0"
+    },
+    "pngquant": {
+      "available": true,
+      "binary": "/usr/bin/pngquant",
+      "version": "2.18.0 (January 2023)"
+    },
+    "crustyimg": {
+      "available": false,
+      "binary": null,
+      "version": null
+    }
+  },
+  "graders": {
+    "ssimulacra2": {
+      "available": true,
+      "binary": "/usr/bin/ssimulacra2",
+      "version": "Usage: /usr/bin/ssimulacra2 orig.png distorted.png"
+    },
+    "ssimulacra2_rs": {
+      "available": false,
+      "binary": null,
+      "version": null
+    },
+    "butteraugli": {
+      "available": true,
+      "binary": "/usr/bin/butteraugli_main",
+      "version": "Usage: /usr/bin/butteraugli_main <reference> <distorted>"
+    },
+    "dssim": {
+      "available": false,
+      "binary": null,
+      "version": null
+    }
+  },
+  "primary_grader": "ssimulacra2",
+  "grader_agreement": {
+    "implementations": [
+      "ssimulacra2 (C ref)",
+      "ssimulacra2_rs (Rust)"
+    ],
+    "tolerance": 5.0,
+    "pairs": [],
+    "agree": null,
+    "note": "second SSIMULACRA2 implementation not installed; cross-check skipped"
+  },
+  "footprint": {
+    "platform": "linux",
+    "tools": {
+      "rimage": {
+        "available": false,
+        "runtime_required": null
+      },
+      "sharp": {
+        "available": true,
+        "binary": "/usr/local/lib/node_modules/sharp-cli/bin/cli.js",
+        "binary_size_bytes": 1314,
+        "dependency_count": 0,
+        "runtime_required": "node",
+        "runtime_present": true
+      },
+      "cwebp": {
+        "available": true,
+        "binary": "/usr/bin/cwebp",
+        "binary_size_bytes": 68856,
+        "dependency_count": 18,
+        "runtime_required": null
+      },
+      "avifenc": {
+        "available": true,
+        "binary": "/usr/bin/avifenc",
+        "binary_size_bytes": 133360,
+        "dependency_count": 36,
+        "runtime_required": null
+      },
+      "cjpeg": {
+        "available": true,
+        "binary": "/opt/mozjpeg/bin/cjpeg",
+        "binary_size_bytes": 920208,
+        "dependency_count": 4,
+        "runtime_required": null
+      },
+      "oxipng": {
+        "available": true,
+        "binary": "/opt/cargo/bin/oxipng",
+        "binary_size_bytes": 1184648,
+        "dependency_count": 5,
+        "runtime_required": null
+      },
+      "sharp-png": {
+        "available": true,
+        "binary": "/usr/local/lib/node_modules/sharp-cli/bin/cli.js",
+        "binary_size_bytes": 1314,
+        "dependency_count": 0,
+        "runtime_required": "node",
+        "runtime_present": true
+      },
+      "pngquant": {
+        "available": true,
+        "binary": "/usr/bin/pngquant",
+        "binary_size_bytes": 68568,
+        "dependency_count": 8,
+        "runtime_required": null
+      },
+      "crustyimg": {
+        "available": false,
+        "runtime_required": null
+      }
+    }
+  }
 }
