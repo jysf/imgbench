@@ -23,8 +23,8 @@ the screenshots are self-captured. No image carries GPS or personal data.
 | `photo_lowlight.png` | Quebec city at dusk, lit tower | low-light noise + dark gradients | [Wikimedia](https://commons.wikimedia.org/wiki/File:%C3%89difice_Price_at_night,_Quebec_city,_Canada.jpg) · Wilfredor · **CC0** | `22bd0ae644e4…090bd8098` |
 | `photo_exif.jpg` | autumn leaves, w/ synthetic EXIF | metadata-strip lane (tools must drop EXIF) | [Wikimedia](https://commons.wikimedia.org/wiki/File:Colorful_leaves_in_autumn.jpg) · Tbk1101 · **CC0** | `3b8dcf2b87a6…ab9cd016` |
 | `alpha_logo.png` | generated RGBA, real transparency | transparency-correctness check | generated · **CC0** | `dfa0c16e1726…0d4bdae6` |
-| `screenshot_ui.png` | macOS Calculator (scientific) UI — flat color, buttons, sharp edges | lossless/near-lossless path | self-captured · **CC0** | `8e282db7b40d…57bdebc7` |
-| `screenshot_text.png` | editor / terminal, dense text | text edges, palette path | self-captured · **CC0** | _TODO — pending capture_ |
+| `screenshot_ui.png` | macOS Calculator (scientific) UI — flat color, buttons, sharp edges | lossless/near-lossless path | self-captured · third-party UI, see note | `8e282db7b40d…57bdebc7` |
+| `screenshot_text.png` | Craigslist SF landing page — dense text/links | text edges, palette path | self-captured · third-party UI, see note | `7719aa15cc5c…f01b254e2` |
 
 (Truncated hashes shown for readability; `bench corpus` prints/checks the full
 64-hex digests, which are the source of truth.)
@@ -34,9 +34,13 @@ the screenshots are self-captured. No image carries GPS or personal data.
 - **`photo_exif.jpg`** carries *synthetic* EXIF (`Make=imgbench`, `Model=TestCam
   EXIF`, a date) and **no GPS** — just enough metadata for the strip lane to have
   something to strip, with nothing personal.
-- **Screenshots** are self-captured of your own editor/terminal (license-clean,
-  no third-party creative content or account identifiers). Drop them into
-  `corpus/images/`, then run `bench corpus` to fill the two `TODO` hashes above.
+- **Screenshots** (`screenshot_ui` = macOS Calculator; `screenshot_text` =
+  Craigslist landing page) are self-captured and contain **third-party UI**
+  (Apple's app chrome; Craigslist's page). They're included as *functional
+  benchmark inputs* under a fair-use rationale — factual, transformative, no
+  market harm — and are **not relicensed**. They carry no personal data or
+  account identifiers. Swap for captures of software you own if you prefer zero
+  third-party content.
 - The **personal-photo corpus** lives locally in `corpus/local/` (gitignored,
   never published); run it with `just run-local`.
 
