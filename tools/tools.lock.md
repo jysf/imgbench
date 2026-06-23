@@ -11,7 +11,7 @@ refuses to diff (unless `--allow-version-drift`).
 | butteraugli_main (libjxl) | visually-lossless cross-check | Debian trixie `libjxl-devtools` | `apt install libjxl-devtools` | ships alongside ssimulacra2 |
 | ssimulacra2_rs | grader cross-check only | **omitted** | `cargo install ssimulacra2_rs` | needs vapoursynth + fontconfig; agreement check records "not installed" |
 | dssim | cross-check | TODO | `cargo install dssim` | optional |
-| rimage | contender (1:1) | 0.12.3 (**fails to install** — see note) | `cargo install rimage` | non-fatal in Dockerfile; investigate build before relying on it |
+| rimage | contender (1:1) | 0.12.3 | `cargo install rimage --features build-binary` | the CLI binary is behind the `build-binary` feature; verify the 0.12 CLI matches the adapter |
 | sharp-cli | contender (ecosystem baseline) | 4.2.0 | `npm i -g sharp-cli` | Node + libvips; report cold-start separately |
 | cwebp (libwebp) | single-format WebP | 1.5.0 | `apt install webp` | provides `dwebp` (used to decode for grading) |
 | avifenc (libavif) | single-format AVIF | 1.2.1 | `apt install libavif-bin` | provides `avifdec` (decode for grading); match `--speed` to shared effort |

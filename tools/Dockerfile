@@ -37,14 +37,13 @@ ARG RUST_VERSION=stable
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
       | sh -s -- -y --default-toolchain ${RUST_VERSION} --profile minimal
 
-# oxipng (reliable, must succeed) then rimage. rimage compiles C bindings and
-# its older releases break against current deps, so it's NON-FATAL: if it can't
-# install, the adapter just reports it missing and the rest of the benchmark
-# still runs. Verify the CLI + repin after a successful build.
+# oxipng then rimage. rimage 0.12.x gates its CLI binary behind the
+# `build-binary` feature — a plain `cargo install rimage` builds only the lib
+# (no binary), so the feature flag is required. Kept non-fatal as a safety net.
 ARG RIMAGE_VERSION=0.12.3
 ARG OXIPNG_VERSION=9.1.2
 RUN cargo install oxipng --version ${OXIPNG_VERSION}
-RUN cargo install rimage --version ${RIMAGE_VERSION} \
+RUN cargo install rimage --version ${RIMAGE_VERSION} --features build-binary \
  || echo "WARNING: rimage ${RIMAGE_VERSION} failed to install; adapter reports missing"
 
 # --- sharp-cli (ecosystem baseline) ---------------------------------------
