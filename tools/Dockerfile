@@ -82,10 +82,23 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # agreement check simply records "second implementation not installed". The
 # Butteraugli cross-check (above) is available regardless.
 
+# --- crustyimg (the subject under test) ------------------------------------
+# Built from source at a pinned commit, Linux-side, with the lossy codecs:
+# webp-lossy (vendors libwebp via cc) + avif (pure-Rust ravif/rav1e). The
+# adapter auto-detects /usr/local/bin/crustyimg on PATH.
+ARG CRUSTYIMG_REPO=https://github.com/jysf/crustyimg
+ARG CRUSTYIMG_REF=be84c32
+RUN git clone ${CRUSTYIMG_REPO} /tmp/crustyimg \
+ && cd /tmp/crustyimg && git checkout ${CRUSTYIMG_REF} \
+ && cargo build --release --features webp-lossy,avif \
+ && install -m755 target/release/crustyimg /usr/local/bin/crustyimg \
+ && rm -rf /tmp/crustyimg
+
 # Sanity: confirm the key grader/encoder binaries resolve + run.
 RUN cjpeg -version 2>&1 | head -1 || true; \
     ssimulacra2 2>&1 | head -1 || true; \
-    butteraugli_main 2>&1 | head -1 || true
+    butteraugli_main 2>&1 | head -1 || true; \
+    crustyimg --version 2>&1 | head -1 || true
 
 WORKDIR /work
 COPY . /work

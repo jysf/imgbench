@@ -47,15 +47,44 @@ class CrustyImg(Adapter):
         return self.resolved_binary() is not None
 
     def build_features(self) -> list[str]:
-        """Parse the feature list crustyimg reports in ``--version``. Returns
-        [] when unknown. crustyimg is expected to print a line listing the
-        compiled features (adjust the parse to the real output once it ships)."""
-        v = self.version() or ""
-        feats = []
-        for token in v.replace(",", " ").split():
-            if token in REQUIRED_FEATURES or token.startswith("feature"):
-                feats.append(token)
-        return [f for f in REQUIRED_FEATURES if f in v] or feats
+        """crustyimg's --version doesn't list compiled features, so probe ACTUAL
+        capability: encode a small synthetic image and check that (a) WebP
+        responds to --quality (a lossless-only build ignores it → same bytes) and
+        (b) AVIF output is produced. This is the real signal the gate cares about."""
+        import subprocess
+        import tempfile
+        from .. import imageio
+
+        b = self.resolved_binary()
+        if not b:
+            return []
+        feats: list[str] = []
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp)
+            src = d / "probe.png"
+            px = bytearray()
+            for y in range(96):
+                for x in range(96):  # noisy gradient so quality actually matters
+                    px += bytes(((x * 7 + y * 13) % 256, (x * y) % 256,
+                                 (x * 3 + y * 5) % 256))
+            imageio.write_png(src, 96, 96, bytes(px), alpha=False)
+
+            def enc(fmt: str, q: int):
+                out = d / f"p_{fmt}_{q}.{fmt}"
+                try:
+                    subprocess.run([b, "convert", "--format", fmt, "--quality",
+                                    str(q), str(src), "-o", str(out)],
+                                   capture_output=True, timeout=30)
+                except (subprocess.SubprocessError, OSError):
+                    return None
+                return out.stat().st_size if out.exists() else None
+
+            lo, hi = enc("webp", 20), enc("webp", 95)
+            if lo and hi and hi > lo * 1.2:      # quality moves bytes → lossy webp
+                feats.append("webp-lossy")
+            if enc("avif", 60):                  # avif output produced → avif on
+                feats.append("avif")
+        return feats
 
     def feature_check(self, lossy: bool) -> tuple[bool, str]:
         """Return (ok, reason). When a lossy comparison is requested, a
@@ -72,25 +101,24 @@ class CrustyImg(Adapter):
         return True, "features present"
 
     def cmd(self, inp: Path, outp: Path, fmt: str, q, cfg: EncodeConfig):
+        # `convert` re-encodes at the SAME dimensions (the fixed-quality sweep
+        # path). `shrink` is optimize-for-web and DOWNSIZES, which would change
+        # dimensions and break the equal-pixels comparison — so don't use it.
+        # Caveats at 0.1.x: AVIF effort isn't CLI-controllable (ravif default),
+        # and `convert` has no metadata-strip flag (mostly moot — the corpus
+        # sources carry no metadata except the synthetic-EXIF JPEG).
         b = self.resolved_binary() or "crustyimg"
-        cmd = [b, "shrink", "--format", fmt, "--quality", str(q),
-               "--threads", str(cfg.threads)]
-        if fmt == "avif":
-            cmd += ["--effort", str(cfg.avif_effort)]
-        if cfg.strip_metadata:
-            cmd += ["--strip"]
-        cmd += [str(inp), "-o", str(outp)]
-        return cmd
+        return [b, "convert", "--format", fmt, "--quality", str(q),
+                "--jobs", str(cfg.threads), str(inp), "-o", str(outp)]
 
     def native_cmd(self, inp: Path, outp: Path, fmt: str, target: float,
                    cfg: EncodeConfig):
-        """Outcome-driven mode: hit a SSIMULACRA2 target directly (SPEC-016)."""
+        """Outcome-driven mode: ask for a SSIMULACRA2 target directly via
+        ``shrink --ssim`` (SPEC-016). Note: at 0.1.x the auto-quality search is
+        JPEG-centric, so this may be a no-op for webp/avif until it lands."""
         b = self.resolved_binary() or "crustyimg"
-        cmd = [b, "optimize", "--format", fmt,
-               "--target-ssimulacra2", str(target), "--threads", str(cfg.threads)]
-        if cfg.strip_metadata:
-            cmd += ["--strip"]
-        cmd += [str(inp), "-o", str(outp)]
+        cmd = [b, "shrink", "--format", fmt, "--ssim", str(target),
+               "--jobs", str(cfg.threads), str(inp), "-o", str(outp)]
         return cmd
 
     def responsive_cmd(self, inp: Path, outdir: Path, widths, fmts,
