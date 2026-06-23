@@ -27,14 +27,332 @@
     "parallel_jobs": 10,
     "grade_jobs": 1,
     "grade_cache": {
-      "hits": 744,
-      "misses": 126,
-      "entries": 851,
-      "hit_rate": 0.855,
+      "hits": 990,
+      "misses": 278,
+      "entries": 1129,
+      "hit_rate": 0.781,
       "path": "/work/.cache/grade-cache.json"
     }
   },
   "results": [
+    {
+      "tool": "rimage",
+      "image": "alpha_logo.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 9728,
+          "refined": 9977
+        },
+        "90.0": {
+          "coarse": "~15148 (extrapolated @ score 81.0)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "screenshot_ui.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 38624,
+          "refined": 39458
+        },
+        "90.0": {
+          "coarse": "~92910 (extrapolated @ score 88.2)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "alpha_logo.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 5676,
+          "refined": 5687
+        },
+        "90.0": {
+          "coarse": 6483,
+          "refined": 6432
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "screenshot_text.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 184844,
+          "refined": 184960
+        },
+        "90.0": {
+          "coarse": "~459214 (extrapolated @ score 89.6)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_sky.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 107343,
+          "refined": 94140
+        },
+        "90.0": {
+          "coarse": "~362138 (extrapolated @ score 87.2)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_foliage.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 147724,
+          "refined": 147663
+        },
+        "90.0": {
+          "coarse": "~430356 (extrapolated @ score 86.6)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_lowlight.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 534326,
+          "refined": 502340
+        },
+        "90.0": {
+          "coarse": "~955774 (extrapolated @ score 84.1)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "alpha_logo.png",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": null,
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        },
+        "90.0": {
+          "coarse": null,
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_portrait.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 342373,
+          "refined": 329247
+        },
+        "90.0": {
+          "coarse": "~905308 (extrapolated @ score 87.4)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "screenshot_ui.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 32950,
+          "refined": 32950
+        },
+        "90.0": {
+          "coarse": 62247,
+          "refined": 62371
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_foliage.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 108799,
+          "refined": 108438
+        },
+        "90.0": {
+          "coarse": "~2608126 (extrapolated @ score 89.8)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_foliage.png",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 142577,
+          "refined": 142604
+        },
+        "90.0": {
+          "coarse": 479511,
+          "refined": 398880
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_lowlight.png",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 540093,
+          "refined": 529838
+        },
+        "90.0": {
+          "coarse": "~1459715 (extrapolated @ score 85.3)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "screenshot_text.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 190793,
+          "refined": 190302
+        },
+        "90.0": {
+          "coarse": 258874,
+          "refined": 250209
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_exif.jpg",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 597940,
+          "refined": 597023
+        },
+        "90.0": {
+          "coarse": 1105930,
+          "refined": 1092723
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_sky.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 83472,
+          "refined": 78472
+        },
+        "90.0": {
+          "coarse": 1426492,
+          "refined": 723263
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "screenshot_ui.png",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 81308,
+          "refined": 80804
+        },
+        "90.0": {
+          "coarse": "~209918 (extrapolated @ score 87.7)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
     {
       "tool": "sharp",
       "image": "alpha_logo.png",
@@ -52,7 +370,118 @@
         }
       },
       "bd_rate_vs": {
-        "cwebp": 0.0
+        "rimage": 0.0
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_portrait.png",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 311091,
+          "refined": 309113
+        },
+        "90.0": {
+          "coarse": 1084162,
+          "refined": 903788
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "screenshot_text.png",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 378657,
+          "refined": 379021
+        },
+        "90.0": {
+          "coarse": 833436,
+          "refined": 765098
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_lowlight.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 401008,
+          "refined": 389930
+        },
+        "90.0": {
+          "coarse": 2557469,
+          "refined": 1046812
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_sky.png",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 75629,
+          "refined": 74212
+        },
+        "90.0": {
+          "coarse": 663512,
+          "refined": 586973
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_exif.jpg",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 679274,
+          "refined": 674238
+        },
+        "90.0": {
+          "coarse": 1493300,
+          "refined": 1436566
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "sharp",
+      "image": "photo_foliage.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 147724,
+          "refined": 147663
+        },
+        "90.0": {
+          "coarse": "~430356 (extrapolated @ score 86.6)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 0.0
       },
       "median_ms": null
     },
@@ -73,7 +502,7 @@
         }
       },
       "bd_rate_vs": {
-        "cwebp": 0.0
+        "rimage": 0.0
       },
       "median_ms": null
     },
@@ -94,7 +523,7 @@
         }
       },
       "bd_rate_vs": {
-        "cwebp": 0.0
+        "rimage": 0.0
       },
       "median_ms": null
     },
@@ -115,29 +544,106 @@
         }
       },
       "bd_rate_vs": {
-        "cwebp": 0.0
+        "rimage": 0.0
       },
       "median_ms": null
     },
     {
+      "tool": "rimage",
+      "image": "photo_exif.jpg",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 604566,
+          "refined": 592965
+        },
+        "90.0": {
+          "coarse": 2244966,
+          "refined": 1093056
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_portrait.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 251254,
+          "refined": 234332
+        },
+        "90.0": {
+          "coarse": 3077345,
+          "refined": 966358
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
       "tool": "sharp",
-      "image": "photo_foliage.png",
+      "image": "photo_lowlight.png",
       "format": "webp",
       "mode": "sweep",
       "targets": {
         "80.0": {
-          "coarse": 147724,
-          "refined": 147663
+          "coarse": 534326,
+          "refined": 502340
         },
         "90.0": {
-          "coarse": "~430356 (extrapolated @ score 86.6)",
+          "coarse": "~955774 (extrapolated @ score 84.1)",
           "refined": null,
           "note": "target not bracketed by coarse sweep"
         }
       },
       "bd_rate_vs": {
-        "cwebp": 0.0
+        "rimage": 0.0
       },
+      "median_ms": null
+    },
+    {
+      "tool": "sharp",
+      "image": "photo_portrait.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 342373,
+          "refined": 329247
+        },
+        "90.0": {
+          "coarse": "~905308 (extrapolated @ score 87.4)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "sharp",
+      "image": "alpha_logo.png",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": null,
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        },
+        "90.0": {
+          "coarse": null,
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
       "median_ms": null
     },
     {
@@ -156,68 +662,8 @@
           "refined": 3976
         }
       },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "sharp",
-      "image": "photo_lowlight.png",
-      "format": "webp",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 534326,
-          "refined": 502340
-        },
-        "90.0": {
-          "coarse": "~955774 (extrapolated @ score 84.1)",
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
-        }
-      },
       "bd_rate_vs": {
-        "cwebp": 0.0
-      },
-      "median_ms": null
-    },
-    {
-      "tool": "sharp",
-      "image": "alpha_logo.png",
-      "format": "jpeg",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": null,
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
-        },
-        "90.0": {
-          "coarse": null,
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
-        }
-      },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "sharp",
-      "image": "photo_portrait.png",
-      "format": "webp",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 342373,
-          "refined": 329247
-        },
-        "90.0": {
-          "coarse": "~905308 (extrapolated @ score 87.4)",
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
-        }
-      },
-      "bd_rate_vs": {
-        "cwebp": 0.0
+        "rimage": -43.09
       },
       "median_ms": null
     },
@@ -236,7 +682,9 @@
           "refined": 1127577
         }
       },
-      "bd_rate_vs": {},
+      "bd_rate_vs": {
+        "rimage": 14.91
+      },
       "median_ms": null
     },
     {
@@ -254,7 +702,9 @@
           "refined": 461301
         }
       },
-      "bd_rate_vs": {},
+      "bd_rate_vs": {
+        "rimage": 23.44
+      },
       "median_ms": null
     },
     {
@@ -273,99 +723,9 @@
           "note": "target not bracketed by coarse sweep"
         }
       },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "sharp",
-      "image": "photo_portrait.png",
-      "format": "jpeg",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 355010,
-          "refined": 353471
-        },
-        "90.0": {
-          "coarse": 1105191,
-          "refined": 968637
-        }
+      "bd_rate_vs": {
+        "rimage": 14.14
       },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "sharp",
-      "image": "photo_sky.png",
-      "format": "jpeg",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 103948,
-          "refined": 97508
-        },
-        "90.0": {
-          "coarse": 760222,
-          "refined": 614868
-        }
-      },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "sharp",
-      "image": "screenshot_text.png",
-      "format": "jpeg",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 435879,
-          "refined": 438567
-        },
-        "90.0": {
-          "coarse": 640034,
-          "refined": 637471
-        }
-      },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "cwebp",
-      "image": "alpha_logo.png",
-      "format": "webp",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 9728,
-          "refined": 9977
-        },
-        "90.0": {
-          "coarse": "~15148 (extrapolated @ score 81.0)",
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
-        }
-      },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "sharp",
-      "image": "screenshot_ui.png",
-      "format": "jpeg",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 92738,
-          "refined": 94142
-        },
-        "90.0": {
-          "coarse": "~239695 (extrapolated @ score 88.8)",
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
-        }
-      },
-      "bd_rate_vs": {},
       "median_ms": null
     },
     {
@@ -384,7 +744,109 @@
         }
       },
       "bd_rate_vs": {
-        "cwebp": 0.0
+        "rimage": -0.36
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "sharp",
+      "image": "photo_portrait.png",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 355010,
+          "refined": 353471
+        },
+        "90.0": {
+          "coarse": 1105191,
+          "refined": 968637
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 19.93
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "sharp",
+      "image": "photo_sky.png",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 103948,
+          "refined": 97508
+        },
+        "90.0": {
+          "coarse": 760222,
+          "refined": 614868
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 70.9
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "sharp",
+      "image": "screenshot_text.png",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 435879,
+          "refined": 438567
+        },
+        "90.0": {
+          "coarse": 640034,
+          "refined": 637471
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 17.7
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "cwebp",
+      "image": "alpha_logo.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 9728,
+          "refined": 9977
+        },
+        "90.0": {
+          "coarse": "~15148 (extrapolated @ score 81.0)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "sharp",
+      "image": "screenshot_ui.png",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 92738,
+          "refined": 94142
+        },
+        "90.0": {
+          "coarse": "~239695 (extrapolated @ score 88.8)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 21.49
       },
       "median_ms": null
     },
@@ -404,26 +866,9 @@
           "note": "target not bracketed by coarse sweep"
         }
       },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "sharp",
-      "image": "screenshot_text.png",
-      "format": "avif",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": "~124588 (extrapolated @ score 82.9)",
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
-        },
-        "90.0": {
-          "coarse": 199127,
-          "refined": 198771
-        }
+      "bd_rate_vs": {
+        "rimage": 0.0
       },
-      "bd_rate_vs": {},
       "median_ms": null
     },
     {
@@ -442,25 +887,30 @@
           "note": "target not bracketed by coarse sweep"
         }
       },
-      "bd_rate_vs": {},
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
       "median_ms": null
     },
     {
       "tool": "sharp",
-      "image": "screenshot_ui.png",
+      "image": "screenshot_text.png",
       "format": "avif",
       "mode": "sweep",
       "targets": {
         "80.0": {
-          "coarse": 18481,
-          "refined": 18504
+          "coarse": "~124588 (extrapolated @ score 82.9)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
         },
         "90.0": {
-          "coarse": 34892,
-          "refined": 34346
+          "coarse": 199127,
+          "refined": 198771
         }
       },
-      "bd_rate_vs": {},
+      "bd_rate_vs": {
+        "rimage": -28.91
+      },
       "median_ms": null
     },
     {
@@ -479,26 +929,29 @@
           "note": "target not bracketed by coarse sweep"
         }
       },
-      "bd_rate_vs": {},
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
       "median_ms": null
     },
     {
-      "tool": "cwebp",
-      "image": "screenshot_text.png",
-      "format": "webp",
+      "tool": "sharp",
+      "image": "screenshot_ui.png",
+      "format": "avif",
       "mode": "sweep",
       "targets": {
         "80.0": {
-          "coarse": 184844,
-          "refined": 184960
+          "coarse": 18481,
+          "refined": 18504
         },
         "90.0": {
-          "coarse": "~459214 (extrapolated @ score 89.6)",
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
+          "coarse": 34892,
+          "refined": 34346
         }
       },
-      "bd_rate_vs": {},
+      "bd_rate_vs": {
+        "rimage": -45.6
+      },
       "median_ms": null
     },
     {
@@ -517,7 +970,9 @@
           "note": "target not bracketed by coarse sweep"
         }
       },
-      "bd_rate_vs": {},
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
       "median_ms": null
     },
     {
@@ -536,7 +991,30 @@
           "note": "target not bracketed by coarse sweep"
         }
       },
-      "bd_rate_vs": {},
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "cwebp",
+      "image": "screenshot_text.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 184844,
+          "refined": 184960
+        },
+        "90.0": {
+          "coarse": "~459214 (extrapolated @ score 89.6)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
       "median_ms": null
     },
     {
@@ -554,7 +1032,9 @@
           "refined": 1399238
         }
       },
-      "bd_rate_vs": {},
+      "bd_rate_vs": {
+        "rimage": -0.36
+      },
       "median_ms": null
     },
     {
@@ -574,7 +1054,7 @@
         }
       },
       "bd_rate_vs": {
-        "sharp": 0.3
+        "rimage": -42.87
       },
       "median_ms": null
     },
@@ -593,7 +1073,9 @@
           "refined": 312443
         }
       },
-      "bd_rate_vs": {},
+      "bd_rate_vs": {
+        "rimage": -41.61
+      },
       "median_ms": null
     },
     {
@@ -613,7 +1095,7 @@
         }
       },
       "bd_rate_vs": {
-        "sharp": 6.86
+        "rimage": -24.01
       },
       "median_ms": null
     },
@@ -633,7 +1115,7 @@
         }
       },
       "bd_rate_vs": {
-        "sharp": -3.98
+        "rimage": -43.21
       },
       "median_ms": null
     },
@@ -658,21 +1140,23 @@
       "median_ms": null
     },
     {
-      "tool": "sharp",
+      "tool": "cjpeg",
       "image": "photo_exif.jpg",
-      "format": "avif",
+      "format": "jpeg",
       "mode": "sweep",
       "targets": {
         "80.0": {
-          "coarse": 559487,
-          "refined": 559535
+          "coarse": 601465,
+          "refined": 602160
         },
         "90.0": {
-          "coarse": 942945,
-          "refined": 937650
+          "coarse": 1133799,
+          "refined": 1113454
         }
       },
-      "bd_rate_vs": {},
+      "bd_rate_vs": {
+        "rimage": -0.63
+      },
       "median_ms": null
     },
     {
@@ -691,47 +1175,7 @@
         }
       },
       "bd_rate_vs": {
-        "sharp": -15.87
-      },
-      "median_ms": null
-    },
-    {
-      "tool": "cjpeg",
-      "image": "photo_exif.jpg",
-      "format": "jpeg",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 601465,
-          "refined": 602160
-        },
-        "90.0": {
-          "coarse": 1133799,
-          "refined": 1113454
-        }
-      },
-      "bd_rate_vs": {
-        "sharp": -12.97
-      },
-      "median_ms": null
-    },
-    {
-      "tool": "avifenc",
-      "image": "screenshot_ui.png",
-      "format": "avif",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 18551,
-          "refined": 18561
-        },
-        "90.0": {
-          "coarse": 35174,
-          "refined": 35062
-        }
-      },
-      "bd_rate_vs": {
-        "sharp": 1.07
+        "rimage": 3.51
       },
       "median_ms": null
     },
@@ -751,7 +1195,27 @@
         }
       },
       "bd_rate_vs": {
-        "sharp": -15.28
+        "rimage": -2.58
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "avifenc",
+      "image": "screenshot_ui.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 18551,
+          "refined": 18561
+        },
+        "90.0": {
+          "coarse": 35174,
+          "refined": 35062
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": -45.41
       },
       "median_ms": null
     },
@@ -771,27 +1235,7 @@
         }
       },
       "bd_rate_vs": {
-        "sharp": -41.54
-      },
-      "median_ms": null
-    },
-    {
-      "tool": "cjpeg",
-      "image": "screenshot_ui.png",
-      "format": "jpeg",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 74988,
-          "refined": 74301
-        },
-        "90.0": {
-          "coarse": 191243,
-          "refined": 179925
-        }
-      },
-      "bd_rate_vs": {
-        "sharp": -22.51
+        "rimage": -0.22
       },
       "median_ms": null
     },
@@ -811,17 +1255,28 @@
         }
       },
       "bd_rate_vs": {
-        "sharp": -12.39
+        "rimage": 4.23
       },
       "median_ms": null
     },
     {
-      "tool": "oxipng",
-      "image": "photo_exif.jpg",
-      "format": "png",
-      "mode": "lossless",
-      "targets": {},
-      "bd_rate_vs": {},
+      "tool": "cjpeg",
+      "image": "screenshot_ui.png",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 74988,
+          "refined": 74301
+        },
+        "90.0": {
+          "coarse": 191243,
+          "refined": 179925
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": -4.78
+      },
       "median_ms": null
     },
     {
@@ -841,6 +1296,15 @@
       "median_ms": null
     },
     {
+      "tool": "oxipng",
+      "image": "photo_exif.jpg",
+      "format": "png",
+      "mode": "lossless",
+      "targets": {},
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
       "tool": "cjpeg",
       "image": "screenshot_text.png",
       "format": "jpeg",
@@ -856,7 +1320,27 @@
         }
       },
       "bd_rate_vs": {
-        "sharp": -12.96
+        "rimage": -1.42
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "sharp",
+      "image": "photo_exif.jpg",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 559487,
+          "refined": 559535
+        },
+        "90.0": {
+          "coarse": 942945,
+          "refined": 937650
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": -11.13
       },
       "median_ms": null
     },
@@ -875,7 +1359,9 @@
           "refined": 338238
         }
       },
-      "bd_rate_vs": {},
+      "bd_rate_vs": {
+        "rimage": -30.49
+      },
       "median_ms": null
     },
     {
@@ -887,22 +1373,6 @@
       "bd_rate_vs": {},
       "lossless": {
         "bytes": 3419629,
-        "score": 100.0,
-        "median_ms": null,
-        "min_ms": null,
-        "peak_rss_kib": null
-      },
-      "median_ms": null
-    },
-    {
-      "tool": "oxipng",
-      "image": "photo_foliage.png",
-      "format": "png",
-      "mode": "lossless",
-      "targets": {},
-      "bd_rate_vs": {},
-      "lossless": {
-        "bytes": 1904711,
         "score": 100.0,
         "median_ms": null,
         "min_ms": null,
@@ -926,23 +1396,27 @@
         }
       },
       "bd_rate_vs": {
-        "sharp": 3.69
+        "rimage": -28.44
       },
       "median_ms": null
     },
     {
-      "tool": "oxipng",
-      "image": "screenshot_text.png",
-      "format": "png",
-      "mode": "lossless",
-      "targets": {},
-      "bd_rate_vs": {},
-      "lossless": {
-        "bytes": 247162,
-        "score": 100.0,
-        "median_ms": null,
-        "min_ms": null,
-        "peak_rss_kib": null
+      "tool": "avifenc",
+      "image": "photo_exif.jpg",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 623934,
+          "refined": 624809
+        },
+        "90.0": {
+          "coarse": 1016783,
+          "refined": 1014456
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": -2.77
       },
       "median_ms": null
     },
@@ -955,6 +1429,22 @@
       "bd_rate_vs": {},
       "lossless": {
         "bytes": 32433,
+        "score": 100.0,
+        "median_ms": null,
+        "min_ms": null,
+        "peak_rss_kib": null
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "sharp-png",
+      "image": "photo_exif.jpg",
+      "format": "png",
+      "mode": "lossless",
+      "targets": {},
+      "bd_rate_vs": {},
+      "lossless": {
+        "bytes": 7071678,
         "score": 100.0,
         "median_ms": null,
         "min_ms": null,
@@ -979,14 +1469,14 @@
       "median_ms": null
     },
     {
-      "tool": "sharp-png",
-      "image": "photo_exif.jpg",
+      "tool": "oxipng",
+      "image": "photo_foliage.png",
       "format": "png",
       "mode": "lossless",
       "targets": {},
       "bd_rate_vs": {},
       "lossless": {
-        "bytes": 7071678,
+        "bytes": 1904711,
         "score": 100.0,
         "median_ms": null,
         "min_ms": null,
@@ -1027,22 +1517,18 @@
       "median_ms": null
     },
     {
-      "tool": "avifenc",
-      "image": "photo_exif.jpg",
-      "format": "avif",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 623934,
-          "refined": 624809
-        },
-        "90.0": {
-          "coarse": 1016783,
-          "refined": 1014456
-        }
-      },
-      "bd_rate_vs": {
-        "sharp": 10.66
+      "tool": "sharp-png",
+      "image": "screenshot_text.png",
+      "format": "png",
+      "mode": "lossless",
+      "targets": {},
+      "bd_rate_vs": {},
+      "lossless": {
+        "bytes": 256286,
+        "score": 100.0,
+        "median_ms": null,
+        "min_ms": null,
+        "peak_rss_kib": null
       },
       "median_ms": null
     },
@@ -1064,13 +1550,13 @@
     },
     {
       "tool": "sharp-png",
-      "image": "screenshot_text.png",
+      "image": "screenshot_ui.png",
       "format": "png",
       "mode": "lossless",
       "targets": {},
       "bd_rate_vs": {},
       "lossless": {
-        "bytes": 256286,
+        "bytes": 109801,
         "score": 100.0,
         "median_ms": null,
         "min_ms": null,
@@ -1096,22 +1582,6 @@
         }
       },
       "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "sharp-png",
-      "image": "screenshot_ui.png",
-      "format": "png",
-      "mode": "lossless",
-      "targets": {},
-      "bd_rate_vs": {},
-      "lossless": {
-        "bytes": 109801,
-        "score": 100.0,
-        "median_ms": null,
-        "min_ms": null,
-        "peak_rss_kib": null
-      },
       "median_ms": null
     },
     {
@@ -1150,6 +1620,22 @@
     },
     {
       "tool": "oxipng",
+      "image": "screenshot_text.png",
+      "format": "png",
+      "mode": "lossless",
+      "targets": {},
+      "bd_rate_vs": {},
+      "lossless": {
+        "bytes": 247162,
+        "score": 100.0,
+        "median_ms": null,
+        "min_ms": null,
+        "peak_rss_kib": null
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "oxipng",
       "image": "photo_portrait.png",
       "format": "png",
       "mode": "lossless",
@@ -1162,77 +1648,6 @@
         "min_ms": null,
         "peak_rss_kib": null
       },
-      "median_ms": null
-    },
-    {
-      "tool": "oxipng",
-      "image": "photo_sky.png",
-      "format": "png",
-      "mode": "lossless",
-      "targets": {},
-      "bd_rate_vs": {},
-      "lossless": {
-        "bytes": 1161521,
-        "score": 100.0,
-        "median_ms": null,
-        "min_ms": null,
-        "peak_rss_kib": null
-      },
-      "median_ms": null
-    },
-    {
-      "tool": "pngquant",
-      "image": "screenshot_text.png",
-      "format": "png",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": "~94713 (extrapolated @ score 87.4)",
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
-        },
-        "90.0": {
-          "coarse": 100788,
-          "refined": 100049
-        }
-      },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "pngquant",
-      "image": "screenshot_ui.png",
-      "format": "png",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 40084,
-          "refined": 39835
-        },
-        "90.0": {
-          "coarse": 49252,
-          "refined": 47607
-        }
-      },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "sharp",
-      "image": "photo_lowlight.png",
-      "format": "avif",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 358590,
-          "refined": 358219
-        },
-        "90.0": {
-          "coarse": 1058260,
-          "refined": 1027060
-        }
-      },
-      "bd_rate_vs": {},
       "median_ms": null
     },
     {
@@ -1257,6 +1672,25 @@
     },
     {
       "tool": "pngquant",
+      "image": "screenshot_text.png",
+      "format": "png",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": "~94713 (extrapolated @ score 87.4)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        },
+        "90.0": {
+          "coarse": 100788,
+          "refined": 100049
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "pngquant",
       "image": "photo_lowlight.png",
       "format": "png",
       "mode": "sweep",
@@ -1270,6 +1704,24 @@
           "coarse": "~1239717 (extrapolated @ score 70.0)",
           "refined": null,
           "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "pngquant",
+      "image": "screenshot_ui.png",
+      "format": "png",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 40084,
+          "refined": 39835
+        },
+        "90.0": {
+          "coarse": 49252,
+          "refined": 47607
         }
       },
       "bd_rate_vs": {},
@@ -1296,6 +1748,42 @@
       "median_ms": null
     },
     {
+      "tool": "oxipng",
+      "image": "photo_sky.png",
+      "format": "png",
+      "mode": "lossless",
+      "targets": {},
+      "bd_rate_vs": {},
+      "lossless": {
+        "bytes": 1161521,
+        "score": 100.0,
+        "median_ms": null,
+        "min_ms": null,
+        "peak_rss_kib": null
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "sharp",
+      "image": "photo_lowlight.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 358590,
+          "refined": 358219
+        },
+        "90.0": {
+          "coarse": 1058260,
+          "refined": 1027060
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": -11.26
+      },
+      "median_ms": null
+    },
+    {
       "tool": "sharp",
       "image": "photo_portrait.png",
       "format": "avif",
@@ -1310,7 +1798,9 @@
           "refined": 656409
         }
       },
-      "bd_rate_vs": {},
+      "bd_rate_vs": {
+        "rimage": -24.08
+      },
       "median_ms": null
     },
     {
@@ -1347,7 +1837,7 @@
         }
       },
       "bd_rate_vs": {
-        "sharp": 2.69
+        "rimage": -8.85
       },
       "median_ms": null
     },
@@ -1367,7 +1857,7 @@
         }
       },
       "bd_rate_vs": {
-        "sharp": 1.79
+        "rimage": -22.8
       },
       "median_ms": null
     }

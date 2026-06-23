@@ -62,10 +62,10 @@
     "parallel_jobs": 10,
     "grade_jobs": 1,
     "grade_cache": {
-      "hits": 744,
-      "misses": 126,
-      "entries": 851,
-      "hit_rate": 0.855,
+      "hits": 990,
+      "misses": 278,
+      "entries": 1129,
+      "hit_rate": 0.781,
       "path": "/work/.cache/grade-cache.json"
     }
   },
@@ -109,9 +109,9 @@
   },
   "tools": {
     "rimage": {
-      "available": false,
-      "binary": null,
-      "version": null
+      "available": true,
+      "binary": "/opt/cargo/bin/rimage",
+      "version": "rimage 0.12.3"
     },
     "sharp": {
       "available": true,
@@ -131,7 +131,7 @@
     "cjpeg": {
       "available": true,
       "binary": "/opt/mozjpeg/bin/cjpeg",
-      "version": "mozjpeg version 4.1.1 (build 20260620)"
+      "version": "mozjpeg version 4.1.1 (build 20260623)"
     },
     "oxipng": {
       "available": true,
@@ -191,7 +191,10 @@
     "platform": "linux",
     "tools": {
       "rimage": {
-        "available": false,
+        "available": true,
+        "binary": "/opt/cargo/bin/rimage",
+        "binary_size_bytes": 14390608,
+        "dependency_count": 5,
         "runtime_required": null
       },
       "sharp": {
