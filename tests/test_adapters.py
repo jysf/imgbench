@@ -33,7 +33,7 @@ class TestJpegLane(unittest.TestCase):
         self.assertEqual(cmd[0], "rimage")
         self.assertEqual(cmd[1], "mozjpeg")          # JPEG codec subcommand
         self.assertIn("--quality", cmd)
-        self.assertIn("--threads", cmd)              # honours the threads knob
+        self.assertIn("-d", cmd)                     # rimage writes to a directory
 
     def test_sharp_emits_jpeg_format_flag(self):
         cmd = by_name("sharp").cmd(self.inp, self.outp, "jpeg", 75, self.cfg)

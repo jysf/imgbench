@@ -28,7 +28,8 @@ class Rimage(Adapter):
             # rimage exposes AVIF speed (0..10, lower=slower/better). Map the
             # shared "effort" so all tools sit at the same operating point.
             cmd += ["--speed", str(max(0, 10 - cfg.avif_effort))]
-        cmd += ["--threads", str(cfg.threads)]
-        # rimage strips metadata by default; there is no carry flag to add.
+        # NOTE: rimage 0.12 has no per-codec --threads flag, so cfg.threads
+        # can't be pinned via the CLI (fairness caveat for timed runs). It
+        # strips metadata by default; there's no carry flag to add.
         cmd += [str(inp), "-d", str(outp.parent)]
         return cmd
