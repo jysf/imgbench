@@ -32,10 +32,16 @@ class CrustyImg(Adapter):
     binary = os.environ.get("CRUSTYIMG_BIN")
 
     def resolved_binary(self):
-        if self.binary and (shutil.which(self.binary) or Path(self.binary).exists()):
-            return self.binary if Path(self.binary).is_absolute() or shutil.which(self.binary) \
-                else str(Path(self.binary).resolve())
-        return None
+        # Prefer an explicit CRUSTYIMG_BIN (path or name); otherwise fall back to
+        # a `crustyimg` on PATH (e.g. built into the tools image), so no env var
+        # is needed once it's installed.
+        cand = self.binary or os.environ.get("CRUSTYIMG_BIN")
+        if cand:
+            if shutil.which(cand):
+                return shutil.which(cand)
+            if Path(cand).exists():
+                return str(Path(cand).resolve())
+        return shutil.which("crustyimg")
 
     def available(self) -> bool:
         return self.resolved_binary() is not None
