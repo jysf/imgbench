@@ -1,4 +1,4 @@
-# Benchmark run `20260623T174025Z-nogit`
+# Benchmark run `20260623T205328Z-nogit`
 
 > Every size/speed number below is gated on **equal SSIMULACRA2**, never an equal quality-number. Bytes are read off at a fixed perceptual score; a smaller file at a different score is not a result.
 
@@ -21,7 +21,7 @@ _Grader agreement: second SSIMULACRA2 implementation not installed; cross-check 
 
 > ⚠️ **Fast mode** (`--fast`): best-of-1, parallel encodes. Bytes/quality are exact, but **wall-clock here is NOT trustworthy** — use this run for size/quality gating only.
 
-- grade cache: 990 hit / 278 miss (scores memoized by content hash; never bytes or timing)
+- grade cache: 1392 hit / 145 miss (scores memoized by content hash; never bytes or timing)
 
 ## Bytes at equal SSIMULACRA2
 
@@ -30,27 +30,35 @@ _Grader agreement: second SSIMULACRA2 implementation not installed; cross-check 
 | image | tool | @ss2≈80 | @ss2≈90 |
 |---|---|---|---|
 | alpha_logo.png | `avifenc` | ~3129 (extrapolated @ score 82.0) | 3.9 KiB |
+| alpha_logo.png | `crustyimg` | 7.5 KiB | 13.2 KiB |
 | alpha_logo.png | `rimage` | 5.6 KiB | 6.3 KiB |
 | alpha_logo.png | `sharp` | ~3140 (extrapolated @ score 82.2) | 3.9 KiB |
 | photo_exif.jpg | `avifenc` | 610.2 KiB | 990.7 KiB |
+| photo_exif.jpg | `crustyimg` | 600.2 KiB | 989.7 KiB |
 | photo_exif.jpg | `rimage` | 579.1 KiB | 1067.4 KiB |
 | photo_exif.jpg | `sharp` | 546.4 KiB | 915.7 KiB |
 | photo_foliage.png | `avifenc` | 93.9 KiB | 366.4 KiB |
+| photo_foliage.png | `crustyimg` | 104.6 KiB | 388.0 KiB |
 | photo_foliage.png | `rimage` | 105.9 KiB | ~2608126 (extrapolated @ score 89.8) |
 | photo_foliage.png | `sharp` | 89.3 KiB | 330.3 KiB |
 | photo_lowlight.png | `avifenc` | 363.5 KiB | 1073.4 KiB |
+| photo_lowlight.png | `crustyimg` | 405.0 KiB | 1058.7 KiB |
 | photo_lowlight.png | `rimage` | 380.8 KiB | 1022.3 KiB |
 | photo_lowlight.png | `sharp` | 349.8 KiB | 1003.0 KiB |
 | photo_portrait.png | `avifenc` | 194.4 KiB | 679.4 KiB |
+| photo_portrait.png | `crustyimg` | 234.3 KiB | 703.0 KiB |
 | photo_portrait.png | `rimage` | 228.8 KiB | 943.7 KiB |
 | photo_portrait.png | `sharp` | 188.4 KiB | 641.0 KiB |
 | photo_sky.png | `avifenc` | 48.3 KiB | 337.0 KiB |
+| photo_sky.png | `crustyimg` | 70.7 KiB | 373.8 KiB |
 | photo_sky.png | `rimage` | 76.6 KiB | 706.3 KiB |
 | photo_sky.png | `sharp` | 46.7 KiB | 305.1 KiB |
 | screenshot_text.png | `avifenc` | ~133160 (extrapolated @ score 82.2) | 210.2 KiB |
+| screenshot_text.png | `crustyimg` | 222.0 KiB | 365.3 KiB |
 | screenshot_text.png | `rimage` | 185.8 KiB | 244.3 KiB |
 | screenshot_text.png | `sharp` | ~124588 (extrapolated @ score 82.9) | 194.1 KiB |
 | screenshot_ui.png | `avifenc` | 18.1 KiB | 34.2 KiB |
+| screenshot_ui.png | `crustyimg` | 36.3 KiB | 68.0 KiB |
 | screenshot_ui.png | `rimage` | 32.2 KiB | 60.9 KiB |
 | screenshot_ui.png | `sharp` | 18.1 KiB | 33.5 KiB |
 
@@ -100,27 +108,35 @@ _Grader agreement: second SSIMULACRA2 implementation not installed; cross-check 
 
 | image | tool | @ss2≈80 | @ss2≈90 |
 |---|---|---|---|
+| alpha_logo.png | `crustyimg` | 9.7 KiB | ~15148 (extrapolated @ score 81.0) |
 | alpha_logo.png | `cwebp` | 9.7 KiB | ~15148 (extrapolated @ score 81.0) |
 | alpha_logo.png | `rimage` | 9.7 KiB | ~15148 (extrapolated @ score 81.0) |
 | alpha_logo.png | `sharp` | 9.7 KiB | ~15148 (extrapolated @ score 81.0) |
+| photo_exif.jpg | `crustyimg` | 658.2 KiB | 1402.6 KiB |
 | photo_exif.jpg | `cwebp` | 656.4 KiB | 1366.4 KiB |
 | photo_exif.jpg | `rimage` | 658.4 KiB | 1402.9 KiB |
 | photo_exif.jpg | `sharp` | 656.4 KiB | 1366.4 KiB |
+| photo_foliage.png | `crustyimg` | 144.2 KiB | ~430356 (extrapolated @ score 86.6) |
 | photo_foliage.png | `cwebp` | 144.2 KiB | ~430356 (extrapolated @ score 86.6) |
 | photo_foliage.png | `rimage` | 144.2 KiB | ~430356 (extrapolated @ score 86.6) |
 | photo_foliage.png | `sharp` | 144.2 KiB | ~430356 (extrapolated @ score 86.6) |
+| photo_lowlight.png | `crustyimg` | 490.6 KiB | ~955774 (extrapolated @ score 84.1) |
 | photo_lowlight.png | `cwebp` | 490.6 KiB | ~955774 (extrapolated @ score 84.1) |
 | photo_lowlight.png | `rimage` | 490.6 KiB | ~955774 (extrapolated @ score 84.1) |
 | photo_lowlight.png | `sharp` | 490.6 KiB | ~955774 (extrapolated @ score 84.1) |
+| photo_portrait.png | `crustyimg` | 321.5 KiB | ~905308 (extrapolated @ score 87.4) |
 | photo_portrait.png | `cwebp` | 321.5 KiB | ~905308 (extrapolated @ score 87.4) |
 | photo_portrait.png | `rimage` | 321.5 KiB | ~905308 (extrapolated @ score 87.4) |
 | photo_portrait.png | `sharp` | 321.5 KiB | ~905308 (extrapolated @ score 87.4) |
+| photo_sky.png | `crustyimg` | 91.9 KiB | ~362138 (extrapolated @ score 87.2) |
 | photo_sky.png | `cwebp` | 91.9 KiB | ~362138 (extrapolated @ score 87.2) |
 | photo_sky.png | `rimage` | 91.9 KiB | ~362138 (extrapolated @ score 87.2) |
 | photo_sky.png | `sharp` | 91.9 KiB | ~362138 (extrapolated @ score 87.2) |
+| screenshot_text.png | `crustyimg` | 180.6 KiB | ~459214 (extrapolated @ score 89.6) |
 | screenshot_text.png | `cwebp` | 180.6 KiB | ~459214 (extrapolated @ score 89.6) |
 | screenshot_text.png | `rimage` | 180.6 KiB | ~459214 (extrapolated @ score 89.6) |
 | screenshot_text.png | `sharp` | 180.6 KiB | ~459214 (extrapolated @ score 89.6) |
+| screenshot_ui.png | `crustyimg` | 38.5 KiB | ~92910 (extrapolated @ score 88.2) |
 | screenshot_ui.png | `cwebp` | 38.5 KiB | ~92910 (extrapolated @ score 88.2) |
 | screenshot_ui.png | `rimage` | 38.5 KiB | ~92910 (extrapolated @ score 88.2) |
 | screenshot_ui.png | `sharp` | 38.5 KiB | ~92910 (extrapolated @ score 88.2) |
@@ -151,49 +167,65 @@ _Grader agreement: second SSIMULACRA2 implementation not installed; cross-check 
 | image | format | tool | anchor | BD-rate % |
 |---|---|---|---|---|
 | alpha_logo.png | avif | `avifenc` | `rimage` | -42.9% |
+| alpha_logo.png | avif | `crustyimg` | `rimage` | +47.2% |
 | alpha_logo.png | avif | `sharp` | `rimage` | -43.1% |
+| alpha_logo.png | webp | `crustyimg` | `rimage` | +0.0% |
 | alpha_logo.png | webp | `cwebp` | `rimage` | +0.0% |
 | alpha_logo.png | webp | `sharp` | `rimage` | +0.0% |
 | photo_exif.jpg | avif | `avifenc` | `rimage` | -2.8% |
+| photo_exif.jpg | avif | `crustyimg` | `rimage` | -2.2% |
 | photo_exif.jpg | avif | `sharp` | `rimage` | -11.1% |
 | photo_exif.jpg | jpeg | `cjpeg` | `rimage` | -0.6% |
 | photo_exif.jpg | jpeg | `sharp` | `rimage` | +14.9% |
+| photo_exif.jpg | webp | `crustyimg` | `rimage` | -0.1% |
 | photo_exif.jpg | webp | `cwebp` | `rimage` | -0.4% |
 | photo_exif.jpg | webp | `sharp` | `rimage` | -0.4% |
 | photo_foliage.png | avif | `avifenc` | `rimage` | -28.4% |
+| photo_foliage.png | avif | `crustyimg` | `rimage` | -12.2% |
 | photo_foliage.png | avif | `sharp` | `rimage` | -30.5% |
 | photo_foliage.png | jpeg | `cjpeg` | `rimage` | +3.5% |
 | photo_foliage.png | jpeg | `sharp` | `rimage` | +23.4% |
+| photo_foliage.png | webp | `crustyimg` | `rimage` | +0.0% |
 | photo_foliage.png | webp | `cwebp` | `rimage` | +0.0% |
 | photo_foliage.png | webp | `sharp` | `rimage` | +0.0% |
 | photo_lowlight.png | avif | `avifenc` | `rimage` | -8.8% |
+| photo_lowlight.png | avif | `crustyimg` | `rimage` | +1.6% |
 | photo_lowlight.png | avif | `sharp` | `rimage` | -11.3% |
 | photo_lowlight.png | jpeg | `cjpeg` | `rimage` | -2.6% |
 | photo_lowlight.png | jpeg | `sharp` | `rimage` | +14.1% |
+| photo_lowlight.png | webp | `crustyimg` | `rimage` | +0.0% |
 | photo_lowlight.png | webp | `cwebp` | `rimage` | +0.0% |
 | photo_lowlight.png | webp | `sharp` | `rimage` | +0.0% |
 | photo_portrait.png | avif | `avifenc` | `rimage` | -22.8% |
+| photo_portrait.png | avif | `crustyimg` | `rimage` | -4.6% |
 | photo_portrait.png | avif | `sharp` | `rimage` | -24.1% |
 | photo_portrait.png | jpeg | `cjpeg` | `rimage` | +4.2% |
 | photo_portrait.png | jpeg | `sharp` | `rimage` | +19.9% |
+| photo_portrait.png | webp | `crustyimg` | `rimage` | +0.0% |
 | photo_portrait.png | webp | `cwebp` | `rimage` | +0.0% |
 | photo_portrait.png | webp | `sharp` | `rimage` | +0.0% |
 | photo_sky.png | avif | `avifenc` | `rimage` | -43.2% |
+| photo_sky.png | avif | `crustyimg` | `rimage` | -9.6% |
 | photo_sky.png | avif | `sharp` | `rimage` | -41.6% |
 | photo_sky.png | jpeg | `cjpeg` | `rimage` | -0.2% |
 | photo_sky.png | jpeg | `sharp` | `rimage` | +70.9% |
+| photo_sky.png | webp | `crustyimg` | `rimage` | +0.0% |
 | photo_sky.png | webp | `cwebp` | `rimage` | +0.0% |
 | photo_sky.png | webp | `sharp` | `rimage` | +0.0% |
 | screenshot_text.png | avif | `avifenc` | `rimage` | -24.0% |
+| screenshot_text.png | avif | `crustyimg` | `rimage` | +30.2% |
 | screenshot_text.png | avif | `sharp` | `rimage` | -28.9% |
 | screenshot_text.png | jpeg | `cjpeg` | `rimage` | -1.4% |
 | screenshot_text.png | jpeg | `sharp` | `rimage` | +17.7% |
+| screenshot_text.png | webp | `crustyimg` | `rimage` | +0.0% |
 | screenshot_text.png | webp | `cwebp` | `rimage` | +0.0% |
 | screenshot_text.png | webp | `sharp` | `rimage` | +0.0% |
 | screenshot_ui.png | avif | `avifenc` | `rimage` | -45.4% |
+| screenshot_ui.png | avif | `crustyimg` | `rimage` | +15.4% |
 | screenshot_ui.png | avif | `sharp` | `rimage` | -45.6% |
 | screenshot_ui.png | jpeg | `cjpeg` | `rimage` | -4.8% |
 | screenshot_ui.png | jpeg | `sharp` | `rimage` | +21.5% |
+| screenshot_ui.png | webp | `crustyimg` | `rimage` | +0.0% |
 | screenshot_ui.png | webp | `cwebp` | `rimage` | +0.0% |
 | screenshot_ui.png | webp | `sharp` | `rimage` | +0.0% |
 

@@ -27,10 +27,10 @@
     "parallel_jobs": 10,
     "grade_jobs": 1,
     "grade_cache": {
-      "hits": 990,
-      "misses": 278,
-      "entries": 1129,
-      "hit_rate": 0.781,
+      "hits": 1392,
+      "misses": 145,
+      "entries": 1274,
+      "hit_rate": 0.906,
       "path": "/work/.cache/grade-cache.json"
     }
   },
@@ -93,25 +93,6 @@
     },
     {
       "tool": "rimage",
-      "image": "screenshot_text.png",
-      "format": "webp",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 184844,
-          "refined": 184960
-        },
-        "90.0": {
-          "coarse": "~459214 (extrapolated @ score 89.6)",
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
-        }
-      },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "rimage",
       "image": "photo_sky.png",
       "format": "webp",
       "mode": "sweep",
@@ -122,6 +103,25 @@
         },
         "90.0": {
           "coarse": "~362138 (extrapolated @ score 87.2)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "screenshot_text.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 184844,
+          "refined": 184960
+        },
+        "90.0": {
+          "coarse": "~459214 (extrapolated @ score 89.6)",
           "refined": null,
           "note": "target not bracketed by coarse sweep"
         }
@@ -169,6 +169,24 @@
     },
     {
       "tool": "rimage",
+      "image": "screenshot_ui.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 32950,
+          "refined": 32950
+        },
+        "90.0": {
+          "coarse": 62247,
+          "refined": 62371
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
       "image": "alpha_logo.png",
       "format": "jpeg",
       "mode": "sweep",
@@ -189,43 +207,6 @@
     },
     {
       "tool": "rimage",
-      "image": "photo_portrait.png",
-      "format": "webp",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 342373,
-          "refined": 329247
-        },
-        "90.0": {
-          "coarse": "~905308 (extrapolated @ score 87.4)",
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
-        }
-      },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "rimage",
-      "image": "screenshot_ui.png",
-      "format": "avif",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 32950,
-          "refined": 32950
-        },
-        "90.0": {
-          "coarse": 62247,
-          "refined": 62371
-        }
-      },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "rimage",
       "image": "photo_foliage.png",
       "format": "avif",
       "mode": "sweep",
@@ -236,6 +217,25 @@
         },
         "90.0": {
           "coarse": "~2608126 (extrapolated @ score 89.8)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_portrait.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 342373,
+          "refined": 329247
+        },
+        "90.0": {
+          "coarse": "~905308 (extrapolated @ score 87.4)",
           "refined": null,
           "note": "target not bracketed by coarse sweep"
         }
@@ -282,42 +282,6 @@
     },
     {
       "tool": "rimage",
-      "image": "screenshot_text.png",
-      "format": "avif",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 190793,
-          "refined": 190302
-        },
-        "90.0": {
-          "coarse": 258874,
-          "refined": 250209
-        }
-      },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "rimage",
-      "image": "photo_exif.jpg",
-      "format": "jpeg",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 597940,
-          "refined": 597023
-        },
-        "90.0": {
-          "coarse": 1105930,
-          "refined": 1092723
-        }
-      },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "rimage",
       "image": "photo_sky.png",
       "format": "avif",
       "mode": "sweep",
@@ -329,6 +293,24 @@
         "90.0": {
           "coarse": 1426492,
           "refined": 723263
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "screenshot_text.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 190793,
+          "refined": 190302
+        },
+        "90.0": {
+          "coarse": 258874,
+          "refined": 250209
         }
       },
       "bd_rate_vs": {},
@@ -354,24 +336,39 @@
       "median_ms": null
     },
     {
-      "tool": "sharp",
-      "image": "alpha_logo.png",
-      "format": "webp",
+      "tool": "rimage",
+      "image": "photo_sky.png",
+      "format": "jpeg",
       "mode": "sweep",
       "targets": {
         "80.0": {
-          "coarse": 9728,
-          "refined": 9977
+          "coarse": 75629,
+          "refined": 74212
         },
         "90.0": {
-          "coarse": "~15148 (extrapolated @ score 81.0)",
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
+          "coarse": 663512,
+          "refined": 586973
         }
       },
-      "bd_rate_vs": {
-        "rimage": 0.0
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_exif.jpg",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 597940,
+          "refined": 597023
+        },
+        "90.0": {
+          "coarse": 1105930,
+          "refined": 1092723
+        }
       },
+      "bd_rate_vs": {},
       "median_ms": null
     },
     {
@@ -411,113 +408,17 @@
       "median_ms": null
     },
     {
-      "tool": "rimage",
-      "image": "photo_lowlight.png",
-      "format": "avif",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 401008,
-          "refined": 389930
-        },
-        "90.0": {
-          "coarse": 2557469,
-          "refined": 1046812
-        }
-      },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "rimage",
-      "image": "photo_sky.png",
-      "format": "jpeg",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 75629,
-          "refined": 74212
-        },
-        "90.0": {
-          "coarse": 663512,
-          "refined": 586973
-        }
-      },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "rimage",
-      "image": "photo_exif.jpg",
-      "format": "webp",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 679274,
-          "refined": 674238
-        },
-        "90.0": {
-          "coarse": 1493300,
-          "refined": 1436566
-        }
-      },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
       "tool": "sharp",
-      "image": "photo_foliage.png",
+      "image": "alpha_logo.png",
       "format": "webp",
       "mode": "sweep",
       "targets": {
         "80.0": {
-          "coarse": 147724,
-          "refined": 147663
+          "coarse": 9728,
+          "refined": 9977
         },
         "90.0": {
-          "coarse": "~430356 (extrapolated @ score 86.6)",
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
-        }
-      },
-      "bd_rate_vs": {
-        "rimage": 0.0
-      },
-      "median_ms": null
-    },
-    {
-      "tool": "sharp",
-      "image": "screenshot_ui.png",
-      "format": "webp",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 38624,
-          "refined": 39458
-        },
-        "90.0": {
-          "coarse": "~92910 (extrapolated @ score 88.2)",
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
-        }
-      },
-      "bd_rate_vs": {
-        "rimage": 0.0
-      },
-      "median_ms": null
-    },
-    {
-      "tool": "sharp",
-      "image": "screenshot_text.png",
-      "format": "webp",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 184844,
-          "refined": 184960
-        },
-        "90.0": {
-          "coarse": "~459214 (extrapolated @ score 89.6)",
+          "coarse": "~15148 (extrapolated @ score 81.0)",
           "refined": null,
           "note": "target not bracketed by coarse sweep"
         }
@@ -551,19 +452,79 @@
     {
       "tool": "rimage",
       "image": "photo_exif.jpg",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 679274,
+          "refined": 674238
+        },
+        "90.0": {
+          "coarse": 1493300,
+          "refined": 1436566
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "sharp",
+      "image": "screenshot_text.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 184844,
+          "refined": 184960
+        },
+        "90.0": {
+          "coarse": "~459214 (extrapolated @ score 89.6)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_lowlight.png",
       "format": "avif",
       "mode": "sweep",
       "targets": {
         "80.0": {
-          "coarse": 604566,
-          "refined": 592965
+          "coarse": 401008,
+          "refined": 389930
         },
         "90.0": {
-          "coarse": 2244966,
-          "refined": 1093056
+          "coarse": 2557469,
+          "refined": 1046812
         }
       },
       "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "sharp",
+      "image": "photo_foliage.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 147724,
+          "refined": 147663
+        },
+        "90.0": {
+          "coarse": "~430356 (extrapolated @ score 86.6)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
       "median_ms": null
     },
     {
@@ -586,6 +547,27 @@
     },
     {
       "tool": "sharp",
+      "image": "screenshot_ui.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 38624,
+          "refined": 39458
+        },
+        "90.0": {
+          "coarse": "~92910 (extrapolated @ score 88.2)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "sharp",
       "image": "photo_lowlight.png",
       "format": "webp",
       "mode": "sweep",
@@ -603,6 +585,24 @@
       "bd_rate_vs": {
         "rimage": 0.0
       },
+      "median_ms": null
+    },
+    {
+      "tool": "rimage",
+      "image": "photo_exif.jpg",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 604566,
+          "refined": 592965
+        },
+        "90.0": {
+          "coarse": 2244966,
+          "refined": 1093056
+        }
+      },
+      "bd_rate_vs": {},
       "median_ms": null
     },
     {
@@ -648,6 +648,26 @@
     },
     {
       "tool": "sharp",
+      "image": "photo_exif.jpg",
+      "format": "jpeg",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 713096,
+          "refined": 702317
+        },
+        "90.0": {
+          "coarse": 1157234,
+          "refined": 1127577
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 14.91
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "sharp",
       "image": "alpha_logo.png",
       "format": "avif",
       "mode": "sweep",
@@ -664,26 +684,6 @@
       },
       "bd_rate_vs": {
         "rimage": -43.09
-      },
-      "median_ms": null
-    },
-    {
-      "tool": "sharp",
-      "image": "photo_exif.jpg",
-      "format": "jpeg",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 713096,
-          "refined": 702317
-        },
-        "90.0": {
-          "coarse": 1157234,
-          "refined": 1127577
-        }
-      },
-      "bd_rate_vs": {
-        "rimage": 14.91
       },
       "median_ms": null
     },
@@ -809,27 +809,6 @@
       "median_ms": null
     },
     {
-      "tool": "cwebp",
-      "image": "alpha_logo.png",
-      "format": "webp",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 9728,
-          "refined": 9977
-        },
-        "90.0": {
-          "coarse": "~15148 (extrapolated @ score 81.0)",
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
-        }
-      },
-      "bd_rate_vs": {
-        "rimage": 0.0
-      },
-      "median_ms": null
-    },
-    {
       "tool": "sharp",
       "image": "screenshot_ui.png",
       "format": "jpeg",
@@ -847,6 +826,27 @@
       },
       "bd_rate_vs": {
         "rimage": 21.49
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "cwebp",
+      "image": "alpha_logo.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 9728,
+          "refined": 9977
+        },
+        "90.0": {
+          "coarse": "~15148 (extrapolated @ score 81.0)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 0.0
       },
       "median_ms": null
     },
@@ -914,27 +914,6 @@
       "median_ms": null
     },
     {
-      "tool": "cwebp",
-      "image": "photo_sky.png",
-      "format": "webp",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 107343,
-          "refined": 94140
-        },
-        "90.0": {
-          "coarse": "~362138 (extrapolated @ score 87.2)",
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
-        }
-      },
-      "bd_rate_vs": {
-        "rimage": 0.0
-      },
-      "median_ms": null
-    },
-    {
       "tool": "sharp",
       "image": "screenshot_ui.png",
       "format": "avif",
@@ -977,16 +956,16 @@
     },
     {
       "tool": "cwebp",
-      "image": "photo_portrait.png",
+      "image": "photo_sky.png",
       "format": "webp",
       "mode": "sweep",
       "targets": {
         "80.0": {
-          "coarse": 342373,
-          "refined": 329247
+          "coarse": 107343,
+          "refined": 94140
         },
         "90.0": {
-          "coarse": "~905308 (extrapolated @ score 87.4)",
+          "coarse": "~362138 (extrapolated @ score 87.2)",
           "refined": null,
           "note": "target not bracketed by coarse sweep"
         }
@@ -1019,21 +998,22 @@
     },
     {
       "tool": "cwebp",
-      "image": "photo_exif.jpg",
+      "image": "photo_portrait.png",
       "format": "webp",
       "mode": "sweep",
       "targets": {
         "80.0": {
-          "coarse": 676376,
-          "refined": 672160
+          "coarse": 342373,
+          "refined": 329247
         },
         "90.0": {
-          "coarse": 1474037,
-          "refined": 1399238
+          "coarse": "~905308 (extrapolated @ score 87.4)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
         }
       },
       "bd_rate_vs": {
-        "rimage": -0.36
+        "rimage": 0.0
       },
       "median_ms": null
     },
@@ -1055,6 +1035,26 @@
       },
       "bd_rate_vs": {
         "rimage": -42.87
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "cwebp",
+      "image": "photo_exif.jpg",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 676376,
+          "refined": 672160
+        },
+        "90.0": {
+          "coarse": 1474037,
+          "refined": 1399238
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": -0.36
       },
       "median_ms": null
     },
@@ -1240,6 +1240,26 @@
       "median_ms": null
     },
     {
+      "tool": "sharp",
+      "image": "photo_exif.jpg",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 559487,
+          "refined": 559535
+        },
+        "90.0": {
+          "coarse": 942945,
+          "refined": 937650
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": -11.13
+      },
+      "median_ms": null
+    },
+    {
       "tool": "cjpeg",
       "image": "photo_portrait.png",
       "format": "jpeg",
@@ -1281,6 +1301,15 @@
     },
     {
       "tool": "oxipng",
+      "image": "photo_exif.jpg",
+      "format": "png",
+      "mode": "lossless",
+      "targets": {},
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "oxipng",
       "image": "alpha_logo.png",
       "format": "png",
       "mode": "lossless",
@@ -1293,15 +1322,6 @@
         "min_ms": null,
         "peak_rss_kib": null
       },
-      "median_ms": null
-    },
-    {
-      "tool": "oxipng",
-      "image": "photo_exif.jpg",
-      "format": "png",
-      "mode": "lossless",
-      "targets": {},
-      "bd_rate_vs": {},
       "median_ms": null
     },
     {
@@ -1321,26 +1341,6 @@
       },
       "bd_rate_vs": {
         "rimage": -1.42
-      },
-      "median_ms": null
-    },
-    {
-      "tool": "sharp",
-      "image": "photo_exif.jpg",
-      "format": "avif",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 559487,
-          "refined": 559535
-        },
-        "90.0": {
-          "coarse": 942945,
-          "refined": 937650
-        }
-      },
-      "bd_rate_vs": {
-        "rimage": -11.13
       },
       "median_ms": null
     },
@@ -1382,26 +1382,6 @@
     },
     {
       "tool": "avifenc",
-      "image": "photo_foliage.png",
-      "format": "avif",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": 96082,
-          "refined": 96137
-        },
-        "90.0": {
-          "coarse": 389446,
-          "refined": 375214
-        }
-      },
-      "bd_rate_vs": {
-        "rimage": -28.44
-      },
-      "median_ms": null
-    },
-    {
-      "tool": "avifenc",
       "image": "photo_exif.jpg",
       "format": "avif",
       "mode": "sweep",
@@ -1417,6 +1397,26 @@
       },
       "bd_rate_vs": {
         "rimage": -2.77
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "avifenc",
+      "image": "photo_foliage.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 96082,
+          "refined": 96137
+        },
+        "90.0": {
+          "coarse": 389446,
+          "refined": 375214
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": -28.44
       },
       "median_ms": null
     },
@@ -1518,22 +1518,6 @@
     },
     {
       "tool": "sharp-png",
-      "image": "screenshot_text.png",
-      "format": "png",
-      "mode": "lossless",
-      "targets": {},
-      "bd_rate_vs": {},
-      "lossless": {
-        "bytes": 256286,
-        "score": 100.0,
-        "median_ms": null,
-        "min_ms": null,
-        "peak_rss_kib": null
-      },
-      "median_ms": null
-    },
-    {
-      "tool": "sharp-png",
       "image": "photo_sky.png",
       "format": "png",
       "mode": "lossless",
@@ -1542,6 +1526,22 @@
       "lossless": {
         "bytes": 1547880,
         "score": 93.01142753,
+        "median_ms": null,
+        "min_ms": null,
+        "peak_rss_kib": null
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "sharp-png",
+      "image": "screenshot_text.png",
+      "format": "png",
+      "mode": "lossless",
+      "targets": {},
+      "bd_rate_vs": {},
+      "lossless": {
+        "bytes": 256286,
+        "score": 100.0,
         "median_ms": null,
         "min_ms": null,
         "peak_rss_kib": null
@@ -1672,25 +1672,6 @@
     },
     {
       "tool": "pngquant",
-      "image": "screenshot_text.png",
-      "format": "png",
-      "mode": "sweep",
-      "targets": {
-        "80.0": {
-          "coarse": "~94713 (extrapolated @ score 87.4)",
-          "refined": null,
-          "note": "target not bracketed by coarse sweep"
-        },
-        "90.0": {
-          "coarse": 100788,
-          "refined": 100049
-        }
-      },
-      "bd_rate_vs": {},
-      "median_ms": null
-    },
-    {
-      "tool": "pngquant",
       "image": "photo_lowlight.png",
       "format": "png",
       "mode": "sweep",
@@ -1704,6 +1685,25 @@
           "coarse": "~1239717 (extrapolated @ score 70.0)",
           "refined": null,
           "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "pngquant",
+      "image": "screenshot_text.png",
+      "format": "png",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": "~94713 (extrapolated @ score 87.4)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        },
+        "90.0": {
+          "coarse": 100788,
+          "refined": 100049
         }
       },
       "bd_rate_vs": {},
@@ -1728,6 +1728,64 @@
       "median_ms": null
     },
     {
+      "tool": "crustyimg",
+      "image": "alpha_logo.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 9728,
+          "refined": 9977
+        },
+        "90.0": {
+          "coarse": "~15148 (extrapolated @ score 81.0)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "crustyimg",
+      "image": "photo_foliage.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 147724,
+          "refined": 147663
+        },
+        "90.0": {
+          "coarse": "~430356 (extrapolated @ score 86.6)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "oxipng",
+      "image": "photo_sky.png",
+      "format": "png",
+      "mode": "lossless",
+      "targets": {},
+      "bd_rate_vs": {},
+      "lossless": {
+        "bytes": 1161521,
+        "score": 100.0,
+        "median_ms": null,
+        "min_ms": null,
+        "peak_rss_kib": null
+      },
+      "median_ms": null
+    },
+    {
       "tool": "pngquant",
       "image": "photo_portrait.png",
       "format": "png",
@@ -1748,22 +1806,6 @@
       "median_ms": null
     },
     {
-      "tool": "oxipng",
-      "image": "photo_sky.png",
-      "format": "png",
-      "mode": "lossless",
-      "targets": {},
-      "bd_rate_vs": {},
-      "lossless": {
-        "bytes": 1161521,
-        "score": 100.0,
-        "median_ms": null,
-        "min_ms": null,
-        "peak_rss_kib": null
-      },
-      "median_ms": null
-    },
-    {
       "tool": "sharp",
       "image": "photo_lowlight.png",
       "format": "avif",
@@ -1780,6 +1822,90 @@
       },
       "bd_rate_vs": {
         "rimage": -11.26
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "crustyimg",
+      "image": "screenshot_ui.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 38624,
+          "refined": 39458
+        },
+        "90.0": {
+          "coarse": "~92910 (extrapolated @ score 88.2)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "crustyimg",
+      "image": "photo_sky.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 107343,
+          "refined": 94140
+        },
+        "90.0": {
+          "coarse": "~362138 (extrapolated @ score 87.2)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "crustyimg",
+      "image": "photo_lowlight.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 534326,
+          "refined": 502340
+        },
+        "90.0": {
+          "coarse": "~955774 (extrapolated @ score 84.1)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "crustyimg",
+      "image": "screenshot_text.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 184844,
+          "refined": 184960
+        },
+        "90.0": {
+          "coarse": "~459214 (extrapolated @ score 89.6)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 0.0
       },
       "median_ms": null
     },
@@ -1804,6 +1930,26 @@
       "median_ms": null
     },
     {
+      "tool": "crustyimg",
+      "image": "alpha_logo.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 7818,
+          "refined": 7678
+        },
+        "90.0": {
+          "coarse": 13652,
+          "refined": 13502
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 47.21
+      },
+      "median_ms": null
+    },
+    {
       "tool": "pngquant",
       "image": "photo_sky.png",
       "format": "png",
@@ -1819,6 +1965,127 @@
         }
       },
       "bd_rate_vs": {},
+      "median_ms": null
+    },
+    {
+      "tool": "crustyimg",
+      "image": "photo_portrait.png",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 342373,
+          "refined": 329247
+        },
+        "90.0": {
+          "coarse": "~905308 (extrapolated @ score 87.4)",
+          "refined": null,
+          "note": "target not bracketed by coarse sweep"
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 0.0
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "crustyimg",
+      "image": "photo_exif.jpg",
+      "format": "webp",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 679016,
+          "refined": 673980
+        },
+        "90.0": {
+          "coarse": 1493042,
+          "refined": 1436308
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": -0.05
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "crustyimg",
+      "image": "screenshot_ui.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 37514,
+          "refined": 37210
+        },
+        "90.0": {
+          "coarse": 73581,
+          "refined": 69667
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 15.4
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "crustyimg",
+      "image": "photo_sky.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 72594,
+          "refined": 72388
+        },
+        "90.0": {
+          "coarse": 596717,
+          "refined": 382720
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": -9.56
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "crustyimg",
+      "image": "photo_foliage.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 109514,
+          "refined": 107117
+        },
+        "90.0": {
+          "coarse": 675777,
+          "refined": 397295
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": -12.2
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "crustyimg",
+      "image": "screenshot_text.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 230936,
+          "refined": 227298
+        },
+        "90.0": {
+          "coarse": 378167,
+          "refined": 374098
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 30.22
+      },
       "median_ms": null
     },
     {
@@ -1842,6 +2109,46 @@
       "median_ms": null
     },
     {
+      "tool": "crustyimg",
+      "image": "photo_lowlight.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 430402,
+          "refined": 414704
+        },
+        "90.0": {
+          "coarse": 1560248,
+          "refined": 1084074
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": 1.65
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "crustyimg",
+      "image": "photo_exif.jpg",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 613166,
+          "refined": 614612
+        },
+        "90.0": {
+          "coarse": 1017711,
+          "refined": 1013435
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": -2.24
+      },
+      "median_ms": null
+    },
+    {
       "tool": "avifenc",
       "image": "photo_portrait.png",
       "format": "avif",
@@ -1858,6 +2165,26 @@
       },
       "bd_rate_vs": {
         "rimage": -22.8
+      },
+      "median_ms": null
+    },
+    {
+      "tool": "crustyimg",
+      "image": "photo_portrait.png",
+      "format": "avif",
+      "mode": "sweep",
+      "targets": {
+        "80.0": {
+          "coarse": 253099,
+          "refined": 239885
+        },
+        "90.0": {
+          "coarse": 988017,
+          "refined": 719909
+        }
+      },
+      "bd_rate_vs": {
+        "rimage": -4.57
       },
       "median_ms": null
     }

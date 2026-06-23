@@ -62,10 +62,10 @@
     "parallel_jobs": 10,
     "grade_jobs": 1,
     "grade_cache": {
-      "hits": 990,
-      "misses": 278,
-      "entries": 1129,
-      "hit_rate": 0.781,
+      "hits": 1392,
+      "misses": 145,
+      "entries": 1274,
+      "hit_rate": 0.906,
       "path": "/work/.cache/grade-cache.json"
     }
   },
@@ -149,9 +149,13 @@
       "version": "2.18.0 (January 2023)"
     },
     "crustyimg": {
-      "available": false,
-      "binary": null,
-      "version": null
+      "available": true,
+      "binary": "/usr/local/bin/crustyimg",
+      "version": "crustyimg 0.1.0",
+      "build_features": [
+        "webp-lossy",
+        "avif"
+      ]
     }
   },
   "graders": {
@@ -249,7 +253,10 @@
         "runtime_required": null
       },
       "crustyimg": {
-        "available": false,
+        "available": true,
+        "binary": "/usr/local/bin/crustyimg",
+        "binary_size_bytes": 12056160,
+        "dependency_count": 5,
         "runtime_required": null
       }
     }
